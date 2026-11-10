@@ -1,0 +1,1882 @@
+{
+ "leagues": [
+  {
+   "id": "1106",
+   "uid": "s:1100~l:1106",
+   "name": "PGA Tour",
+   "abbreviation": "PGA",
+   "slug": "pga",
+   "season": {
+    "year": 2025,
+    "startDate": "2025-01-02T05:00Z",
+    "endDate": "2025-12-14T05:00Z",
+    "displayName": "2025",
+    "type": {
+     "id": "2",
+     "type": 2,
+     "name": "Regular Season",
+     "abbreviation": "reg"
+    }
+   },
+   "calendarType": "list",
+   "calendarIsWhitelist": true,
+   "calendarStartDate": "2025-01-02T05:00Z",
+   "calendarEndDate": "2025-12-14T05:00Z",
+   "calendar": [
+    {
+     "id": "401703489",
+     "label": "The Sentry",
+     "startDate": "2025-01-02T08:00Z",
+     "endDate": "2025-01-05T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703489?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703490",
+     "label": "Sony Open in Hawaii",
+     "startDate": "2025-01-09T08:00Z",
+     "endDate": "2025-01-12T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703490?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703491",
+     "label": "The American Express",
+     "startDate": "2025-01-16T08:00Z",
+     "endDate": "2025-01-19T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703491?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703492",
+     "label": "Farmers Insurance Open",
+     "startDate": "2025-01-22T08:00Z",
+     "endDate": "2025-01-25T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703492?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703493",
+     "label": "AT&T Pebble Beach Pro-Am",
+     "startDate": "2025-01-30T08:00Z",
+     "endDate": "2025-02-02T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703493?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703494",
+     "label": "WM Phoenix Open",
+     "startDate": "2025-02-06T08:00Z",
+     "endDate": "2025-02-09T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703494?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703495",
+     "label": "The Genesis Invitational",
+     "startDate": "2025-02-13T08:00Z",
+     "endDate": "2025-02-16T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703495?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703496",
+     "label": "Mexico Open at VidantaWorld",
+     "startDate": "2025-02-20T08:00Z",
+     "endDate": "2025-02-23T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703496?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703497",
+     "label": "Cognizant Classic in The Palm Beaches",
+     "startDate": "2025-02-27T08:00Z",
+     "endDate": "2025-03-02T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703497?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703498",
+     "label": "Arnold Palmer Invitational pres. by Mastercard",
+     "startDate": "2025-03-06T08:00Z",
+     "endDate": "2025-03-09T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703498?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703499",
+     "label": "Puerto Rico Open",
+     "startDate": "2025-03-06T08:00Z",
+     "endDate": "2025-03-09T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703499?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703500",
+     "label": "THE PLAYERS Championship",
+     "startDate": "2025-03-13T07:00Z",
+     "endDate": "2025-03-17T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703500?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703501",
+     "label": "Valspar Championship",
+     "startDate": "2025-03-20T07:00Z",
+     "endDate": "2025-03-23T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703501?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703502",
+     "label": "Texas Children's Houston Open",
+     "startDate": "2025-03-27T07:00Z",
+     "endDate": "2025-03-30T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703502?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703503",
+     "label": "Valero Texas Open",
+     "startDate": "2025-04-03T07:00Z",
+     "endDate": "2025-04-06T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703503?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703504",
+     "label": "Masters Tournament",
+     "startDate": "2025-04-10T07:00Z",
+     "endDate": "2025-04-13T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703504?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703505",
+     "label": "RBC Heritage",
+     "startDate": "2025-04-17T07:00Z",
+     "endDate": "2025-04-20T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703505?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703506",
+     "label": "Corales Puntacana Championship",
+     "startDate": "2025-04-17T07:00Z",
+     "endDate": "2025-04-20T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703506?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703507",
+     "label": "Zurich Classic of New Orleans",
+     "startDate": "2025-04-24T07:00Z",
+     "endDate": "2025-04-27T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703507?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703508",
+     "label": "THE CJ CUP Byron Nelson",
+     "startDate": "2025-05-01T07:00Z",
+     "endDate": "2025-05-04T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703508?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703509",
+     "label": "Truist Championship",
+     "startDate": "2025-05-08T07:00Z",
+     "endDate": "2025-05-11T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703509?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703510",
+     "label": "ONEflight Myrtle Beach Classic",
+     "startDate": "2025-05-08T07:00Z",
+     "endDate": "2025-05-11T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703510?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703511",
+     "label": "PGA Championship",
+     "startDate": "2025-05-15T07:00Z",
+     "endDate": "2025-05-18T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703511?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703512",
+     "label": "Charles Schwab Challenge",
+     "startDate": "2025-05-22T07:00Z",
+     "endDate": "2025-05-25T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703512?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703513",
+     "label": "the Memorial Tournament pres. by Workday",
+     "startDate": "2025-05-29T07:00Z",
+     "endDate": "2025-06-01T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703513?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703514",
+     "label": "RBC Canadian Open",
+     "startDate": "2025-06-05T07:00Z",
+     "endDate": "2025-06-08T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703514?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703515",
+     "label": "U.S. Open",
+     "startDate": "2025-06-12T07:00Z",
+     "endDate": "2025-06-15T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703515?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703516",
+     "label": "Travelers Championship",
+     "startDate": "2025-06-19T07:00Z",
+     "endDate": "2025-06-22T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703516?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703517",
+     "label": "Rocket Classic",
+     "startDate": "2025-06-26T07:00Z",
+     "endDate": "2025-06-29T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703517?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703518",
+     "label": "John Deere Classic",
+     "startDate": "2025-07-03T07:00Z",
+     "endDate": "2025-07-06T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703518?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703519",
+     "label": "Genesis Scottish Open",
+     "startDate": "2025-07-10T07:00Z",
+     "endDate": "2025-07-13T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703519?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703520",
+     "label": "ISCO Championship",
+     "startDate": "2025-07-10T07:00Z",
+     "endDate": "2025-07-13T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703520?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703521",
+     "label": "The Open",
+     "startDate": "2025-07-17T07:00Z",
+     "endDate": "2025-07-20T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703521?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703522",
+     "label": "Barracuda Championship",
+     "startDate": "2025-07-17T07:00Z",
+     "endDate": "2025-07-20T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703522?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703523",
+     "label": "3M Open",
+     "startDate": "2025-07-24T07:00Z",
+     "endDate": "2025-07-27T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703523?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703524",
+     "label": "Wyndham Championship",
+     "startDate": "2025-07-31T07:00Z",
+     "endDate": "2025-08-03T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703524?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703525",
+     "label": "FedEx St. Jude Championship",
+     "startDate": "2025-08-07T07:00Z",
+     "endDate": "2025-08-10T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703525?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703530",
+     "label": "BMW Championship",
+     "startDate": "2025-08-14T07:00Z",
+     "endDate": "2025-08-17T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703530?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401703531",
+     "label": "TOUR Championship",
+     "startDate": "2025-08-21T07:00Z",
+     "endDate": "2025-08-24T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401703531?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401738553",
+     "label": "Procore Championship",
+     "startDate": "2025-09-11T07:00Z",
+     "endDate": "2025-09-14T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401738553?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401734110",
+     "label": "Ryder Cup",
+     "startDate": "2025-09-26T07:00Z",
+     "endDate": "2025-09-28T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401734110?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401738554",
+     "label": "Sanderson Farms Championship",
+     "startDate": "2025-10-02T07:00Z",
+     "endDate": "2025-10-05T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401738554?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401738555",
+     "label": "Baycurrent Classic",
+     "startDate": "2025-10-09T07:00Z",
+     "endDate": "2025-10-12T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401738555?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401738556",
+     "label": "Bank of Utah Championship",
+     "startDate": "2025-10-23T07:00Z",
+     "endDate": "2025-10-26T07:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401738556?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401738557",
+     "label": "World Wide Technology Championship",
+     "startDate": "2025-11-06T08:00Z",
+     "endDate": "2025-11-09T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401738557?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401738558",
+     "label": "Butterfield Bermuda Championship",
+     "startDate": "2025-11-13T08:00Z",
+     "endDate": "2025-11-16T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401738558?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401738559",
+     "label": "The RSM Classic",
+     "startDate": "2025-11-20T08:00Z",
+     "endDate": "2025-11-23T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401738559?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401738560",
+     "label": "Hero World Challenge",
+     "startDate": "2025-12-04T08:00Z",
+     "endDate": "2025-12-07T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401738560?lang=en&region=us"
+     }
+    },
+    {
+     "id": "401833647",
+     "label": "PGA TOUR Q-School presented by Korn Ferry",
+     "startDate": "2025-12-11T08:00Z",
+     "endDate": "2025-12-14T08:00Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/golf/leagues/pga/events/401833647?lang=en&region=us"
+     }
+    }
+   ]
+  }
+ ],
+ "season": {
+  "type": 2,
+  "year": 2025
+ },
+ "day": {
+  "date": "2025-01-01"
+ },
+ "events": [
+  {
+   "id": "401703503",
+   "uid": "s:1100~l:1106~e:401703503",
+   "date": "2025-04-03T04:00Z",
+   "endDate": "2025-04-06T04:00Z",
+   "name": "Valero Texas Open",
+   "shortName": "Valero Texas Open",
+   "season": {
+    "year": 2025,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "competitions": [
+    {
+     "id": "401703503",
+     "uid": "s:1100~l:1106~e:401703503~c:401703503",
+     "date": "2025-04-03T04:00Z",
+     "endDate": "2025-04-06T04:00Z",
+     "timeValid": false,
+     "neutralSite": false,
+     "conferenceCompetition": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "competitors": [
+      {
+       "id": "1225",
+       "uid": "s:1100~l:1106~a:1225",
+       "type": "athlete",
+       "order": 1,
+       "athlete": {
+        "fullName": "Brian Harman",
+        "displayName": "Brian Harman",
+        "shortName": "B. Harman",
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+         "alt": "USA",
+         "rel": [
+          "country-flag"
+         ]
+        }
+       },
+       "score": "-9",
+       "linescores": [
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 1,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 7.0,
+              "displayValue": "7"
+             },
+             {
+              "value": 1.0,
+              "displayValue": "1"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 10.0,
+              "displayValue": "10"
+             },
+             {
+              "displayValue": "Thu Apr 03 08:53:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 2,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 8.0,
+              "displayValue": "8"
+             },
+             {
+              "value": 2.0,
+              "displayValue": "2"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 8.0,
+              "displayValue": "8"
+             },
+             {
+              "displayValue": "Fri Apr 04 14:13:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 72.0,
+         "displayValue": "E",
+         "period": 3,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 2.0,
+              "displayValue": "2"
+             },
+             {
+              "value": 2.0,
+              "displayValue": "2"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 14.0,
+              "displayValue": "14"
+             },
+             {
+              "displayValue": "Sat Apr 05 12:50:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 75.0,
+         "displayValue": "+3",
+         "period": 4,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 3.0,
+              "displayValue": "3"
+             },
+             {
+              "value": 4.0,
+              "displayValue": "4"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 1.0,
+              "displayValue": "1"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 10.0,
+              "displayValue": "10"
+             },
+             {
+              "displayValue": "Sun Apr 06 12:40:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        }
+       ],
+       "statistics": []
+      },
+      {
+       "id": "5076021",
+       "uid": "s:1100~l:1106~a:5076021",
+       "type": "athlete",
+       "order": 2,
+       "athlete": {
+        "fullName": "Ryan Gerard",
+        "displayName": "Ryan Gerard",
+        "shortName": "R. Gerard",
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+         "alt": "USA",
+         "rel": [
+          "country-flag"
+         ]
+        }
+       },
+       "score": "-6",
+       "linescores": [
+        {
+         "value": 73.0,
+         "displayValue": "+1",
+         "period": 1,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 3.0,
+              "displayValue": "3"
+             },
+             {
+              "value": 4.0,
+              "displayValue": "4"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 11.0,
+              "displayValue": "11"
+             },
+             {
+              "displayValue": "Thu Apr 03 09:59:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 2,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 5.0,
+              "displayValue": "5"
+             },
+             {
+              "value": 1.0,
+              "displayValue": "1"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 1.0,
+              "displayValue": "1"
+             },
+             {
+              "value": 11.0,
+              "displayValue": "11"
+             },
+             {
+              "displayValue": "Fri Apr 04 15:19:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 74.0,
+         "displayValue": "+2",
+         "period": 3,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 4.0,
+              "displayValue": "4"
+             },
+             {
+              "value": 3.0,
+              "displayValue": "3"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 10.0,
+              "displayValue": "10"
+             },
+             {
+              "displayValue": "Sat Apr 05 11:44:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 4,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 4.0,
+              "displayValue": "4"
+             },
+             {
+              "value": 1.0,
+              "displayValue": "1"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 13.0,
+              "displayValue": "13"
+             },
+             {
+              "displayValue": "Sun Apr 06 11:28:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        }
+       ],
+       "statistics": []
+      },
+      {
+       "id": "9530",
+       "uid": "s:1100~l:1106~a:9530",
+       "type": "athlete",
+       "order": 3,
+       "athlete": {
+        "fullName": "Maverick McNealy",
+        "displayName": "Maverick McNealy",
+        "shortName": "M. McNealy",
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+         "alt": "USA",
+         "rel": [
+          "country-flag"
+         ]
+        }
+       },
+       "score": "-5",
+       "linescores": [
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 1,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 6.0,
+              "displayValue": "6"
+             },
+             {
+              "value": 2.0,
+              "displayValue": "2"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 10.0,
+              "displayValue": "10"
+             },
+             {
+              "displayValue": "Thu Apr 03 14:14:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 72.0,
+         "displayValue": "E",
+         "period": 2,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 2.0,
+              "displayValue": "2"
+             },
+             {
+              "value": 2.0,
+              "displayValue": "2"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 14.0,
+              "displayValue": "14"
+             },
+             {
+              "displayValue": "Fri Apr 04 09:04:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 71.0,
+         "displayValue": "-1",
+         "period": 3,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 3.0,
+              "displayValue": "3"
+             },
+             {
+              "value": 2.0,
+              "displayValue": "2"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 13.0,
+              "displayValue": "13"
+             },
+             {
+              "displayValue": "Sat Apr 05 11:22:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 72.0,
+         "displayValue": "E",
+         "period": 4,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 2.0,
+              "displayValue": "2"
+             },
+             {
+              "value": 2.0,
+              "displayValue": "2"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0"
+             },
+             {
+              "value": 14.0,
+              "displayValue": "14"
+             },
+             {
+              "displayValue": "Sun Apr 06 12:16:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        }
+       ],
+       "statistics": []
+      }
+     ],
+     "status": {
+      "period": 4,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "completed": true,
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Complete"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "ESPN+",
+        "NBC",
+        "Golf Chnl",
+        "Peacock"
+       ]
+      }
+     ],
+     "startDate": "2025-04-03T04:00Z",
+     "broadcast": "ESPN+/NBC/Golf Chnl/Peacock"
+    }
+   ],
+   "status": {
+    "type": {
+     "id": "3",
+     "name": "STATUS_FINAL",
+     "state": "post",
+     "completed": true,
+     "description": "Final"
+    }
+   }
+  },
+  {
+   "id": "401703507",
+   "uid": "s:1100~l:1106~e:401703507",
+   "date": "2025-04-24T04:00Z",
+   "endDate": "2025-04-27T04:00Z",
+   "name": "Zurich Classic of New Orleans",
+   "shortName": "Zurich Classic of New Orleans",
+   "season": {
+    "year": 2025,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "competitions": [
+    {
+     "id": "11450",
+     "uid": "s:1100~l:1106~e:401703507~c:11450",
+     "date": "2025-04-24T04:00Z",
+     "endDate": "2025-04-27T04:00Z",
+     "type": {
+      "id": "1"
+     },
+     "neutralSite": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "competitors": [
+      {
+       "id": "131066",
+       "uid": "s:1100~l:1106~t:131066",
+       "type": "team",
+       "order": 1,
+       "homeAway": "unknown",
+       "team": {
+        "id": "131066",
+        "uid": "s:1100~t:131066",
+        "name": "Novak/Griffin",
+        "abbreviation": "",
+        "displayName": "Novak/Griffin",
+        "shortDisplayName": "Novak/Griffin",
+        "isActive": true
+       },
+       "score": "-28",
+       "linescores": [
+        {
+         "value": 62.0,
+         "displayValue": "-10",
+         "period": 1,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Thu Apr 24 13:31:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 2,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Fri Apr 25 09:12:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 61.0,
+         "displayValue": "-11",
+         "period": 3,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Sat Apr 26 12:45:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 71.0,
+         "displayValue": "-1",
+         "period": 4,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Sun Apr 27 13:55:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        }
+       ],
+       "statistics": []
+      },
+      {
+       "id": "131036",
+       "uid": "s:1100~l:1106~t:131036",
+       "type": "team",
+       "order": 2,
+       "homeAway": "unknown",
+       "team": {
+        "id": "131036",
+        "uid": "s:1100~t:131036",
+        "name": "Højgaard/Højgaard",
+        "abbreviation": "",
+        "displayName": "Højgaard/Højgaard",
+        "shortDisplayName": "Højgaard/Højgaard",
+        "isActive": true
+       },
+       "score": "-27",
+       "linescores": [
+        {
+         "value": 59.0,
+         "displayValue": "-13",
+         "period": 1,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Thu Apr 24 08:39:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 2,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Fri Apr 25 13:38:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 64.0,
+         "displayValue": "-8",
+         "period": 3,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Sat Apr 26 12:32:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 4,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Sun Apr 27 13:44:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        }
+       ],
+       "statistics": []
+      },
+      {
+       "id": "131058",
+       "uid": "s:1100~l:1106~t:131058",
+       "type": "team",
+       "order": 3,
+       "homeAway": "unknown",
+       "team": {
+        "id": "131058",
+        "uid": "s:1100~t:131058",
+        "name": "Knapp/Capan Iii",
+        "abbreviation": "",
+        "displayName": "Knapp/Capan Iii",
+        "shortDisplayName": "Knapp/Capan Iii",
+        "isActive": true
+       },
+       "score": "-26",
+       "linescores": [
+        {
+         "value": 63.0,
+         "displayValue": "-9",
+         "period": 1,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Thu Apr 24 09:18:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 2,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Fri Apr 25 14:11:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 60.0,
+         "displayValue": "-12",
+         "period": 3,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Sat Apr 26 11:33:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 4,
+         "statistics": {
+          "categories": [
+           {
+            "stats": [
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "value": 0.0,
+              "displayValue": "0.0"
+             },
+             {
+              "displayValue": "Sun Apr 27 13:55:00 PDT 2025"
+             }
+            ]
+           }
+          ]
+         }
+        }
+       ],
+       "statistics": []
+      }
+     ],
+     "notes": [],
+     "status": {
+      "period": 4,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "completed": true,
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Complete"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "ESPN+",
+        "CBS",
+        "Golf Chnl",
+        "Paramount+"
+       ]
+      }
+     ],
+     "startDate": "2025-04-24T04:00Z",
+     "broadcast": "ESPN+/CBS/Golf Chnl/Paramount+"
+    }
+   ],
+   "status": {
+    "type": {
+     "id": "3",
+     "name": "STATUS_FINAL",
+     "state": "post",
+     "completed": true,
+     "description": "Final"
+    }
+   }
+  },
+  {
+   "id": "401734110",
+   "uid": "s:1100~l:1106~e:401734110",
+   "date": "2025-09-26T04:00Z",
+   "endDate": "2025-09-28T04:00Z",
+   "name": "Ryder Cup",
+   "shortName": "Ryder Cup",
+   "season": {
+    "year": 2025,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "competitions": [
+    {
+     "id": "11766",
+     "uid": "s:1100~l:1106~e:401734110~c:11766",
+     "date": "2025-09-26T11:10Z",
+     "endDate": "2025-09-28T16:00Z",
+     "type": {
+      "id": "1"
+     },
+     "neutralSite": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "competitors": [
+      {
+       "id": "1",
+       "uid": "s:1100~l:1106~t:1",
+       "type": "team",
+       "order": 1,
+       "homeAway": "home",
+       "team": {
+        "id": "1",
+        "uid": "s:1100~t:1",
+        "name": "USA",
+        "abbreviation": "USA",
+        "displayName": "USA",
+        "shortDisplayName": "USA",
+        "isActive": true,
+        "logo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/countries/500/usa.png&w=84&h=84",
+        "logoDark": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/countries/500-dark/usa.png&w=84&h=84"
+       },
+       "score": "13",
+       "statistics": [],
+       "winner": false
+      },
+      {
+       "id": "2",
+       "uid": "s:1100~l:1106~t:2",
+       "type": "team",
+       "order": 2,
+       "homeAway": "away",
+       "team": {
+        "id": "2",
+        "uid": "s:1100~t:2",
+        "name": "EUR",
+        "abbreviation": "EUR",
+        "displayName": "EUR",
+        "shortDisplayName": "EUR",
+        "isActive": true,
+        "logo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/countries/500/eur.png&w=84&h=84",
+        "logoDark": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/countries/500-dark/eur.png&w=84&h=84"
+       },
+       "score": "15",
+       "statistics": [],
+       "winner": true
+      }
+     ],
+     "notes": [],
+     "status": {
+      "period": 1,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "completed": true,
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Complete"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "NBC",
+        "USA Net",
+        "Peacock"
+       ]
+      }
+     ],
+     "startDate": "2025-09-26T11:10Z",
+     "broadcast": "NBC/USA Net/Peacock"
+    },
+    {
+     "id": "11767",
+     "uid": "s:1100~l:1106~e:401734110~c:11767",
+     "date": "2025-09-26T11:10Z",
+     "endDate": "2025-09-26T16:00Z",
+     "type": {
+      "id": "5"
+     },
+     "neutralSite": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "competitors": [
+      {
+       "id": "131209",
+       "uid": "s:1100~l:1106~p:131209",
+       "type": "pair",
+       "order": 1,
+       "homeAway": "home",
+       "team": {
+        "id": "1",
+        "uid": "s:1100~t:1",
+        "name": "USA",
+        "abbreviation": "USA",
+        "displayName": "USA",
+        "shortDisplayName": "USA",
+        "isActive": true,
+        "logo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/countries/500/usa.png&w=84&h=84",
+        "logoDark": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/countries/500-dark/usa.png&w=84&h=84"
+       },
+       "score": "",
+       "statistics": [],
+       "winner": false
+      },
+      {
+       "id": "1131",
+       "uid": "s:1100~l:1106~p:1131",
+       "type": "pair",
+       "order": 2,
+       "homeAway": "away",
+       "team": {
+        "id": "2",
+        "uid": "s:1100~t:2",
+        "name": "EUR",
+        "abbreviation": "EUR",
+        "displayName": "EUR",
+        "shortDisplayName": "EUR",
+        "isActive": true,
+        "logo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/countries/500/eur.png&w=84&h=84",
+        "logoDark": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/countries/500-dark/eur.png&w=84&h=84"
+       },
+       "score": "4 & 3",
+       "statistics": [],
+       "winner": true
+      }
+     ],
+     "status": {
+      "period": 1,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "completed": true,
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Complete"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "NBC",
+        "USA Net",
+        "Peacock"
+       ]
+      }
+     ],
+     "startDate": "2025-09-26T11:10Z",
+     "broadcast": "NBC/USA Net/Peacock"
+    }
+   ],
+   "status": {
+    "type": {
+     "id": "3",
+     "name": "STATUS_FINAL",
+     "state": "post",
+     "completed": true,
+     "description": "Final"
+    }
+   }
+  }
+ ],
+ "provider": {
+  "id": "100",
+  "name": "Draft Kings",
+  "displayName": "Draft Kings",
+  "priority": 1
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "athlete": {
+  "id": "9478",
+  "uid": "s:1100~a:9478",
+  "guid": "38cbeebe-aac8-fb36-dce0-cf45436086e4",
+  "firstName": "Scottie",
+  "lastName": "Scheffler",
+  "displayName": "Scottie Scheffler",
+  "fullName": "Scottie Scheffler",
+  "debutYear": 2014,
+  "turnedPro": 2018,
+  "college": {
+   "id": "251",
+   "mascot": "Longhorns",
+   "name": "Texas",
+   "shortName": "Texas",
+   "abbrev": "TEX"
+  },
+  "status": {
+   "id": "1",
+   "name": "Active",
+   "type": "active",
+   "abbreviation": "Active"
+  },
+  "statsSummary": {
+   "displayName": "2026 season stats",
+   "statistics": [
+    {
+     "name": "scoringAverage",
+     "displayName": "Scoring average per round",
+     "shortDisplayName": "Scoring Average",
+     "description": "The player's weighted scoring average.",
+     "abbreviation": "AVG",
+     "value": 67.85897,
+     "displayValue": "67.9",
+     "rank": 1,
+     "rankDisplayValue": "1st"
+    },
+    {
+     "name": "amount",
+     "displayName": "Official money won",
+     "shortDisplayName": "Earnings",
+     "description": "The total amount of money the player has earned.",
+     "abbreviation": "EARNINGS",
+     "value": 30937524.0,
+     "displayValue": "$30,937,524",
+     "rank": 1,
+     "rankDisplayValue": "1st"
+    },
+    {
+     "name": "cupPoints",
+     "displayName": "FedExCup Points",
+     "shortDisplayName": "FedExCup Points",
+     "description": "The total points the player has earned in the FedExCup points race.",
+     "abbreviation": "CUPPTS",
+     "value": 4986.0,
+     "displayValue": "4986",
+     "rank": 1,
+     "rankDisplayValue": "1st"
+    }
+   ]
+  },
+  "displayBirthPlace": "Dallas, Texas                    ",
+  "displayHeight": "6' 3\"",
+  "displayWeight": "200 lbs",
+  "displayDOB": "21/6/1996",
+  "age": 30,
+  "gender": "MALE",
+  "citizenship": "USA",
+  "citizenshipCountry": {
+   "alternateId": "1",
+   "abbreviation": "USA"
+  },
+  "flag": {
+   "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+   "alt": "USA",
+   "rel": [
+    "country-flag"
+   ]
+  },
+  "birthPlace": {
+   "city": "Dallas",
+   "state": "Texas                    ",
+   "country": "USA",
+   "countryAbbreviation": "USA"
+  },
+  "hand": {
+   "type": "RIGHT",
+   "abbreviation": "R",
+   "displayValue": "Right"
+  }
+ }
+}

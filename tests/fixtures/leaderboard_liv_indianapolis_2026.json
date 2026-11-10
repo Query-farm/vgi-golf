@@ -1,0 +1,655 @@
+{
+ "events": [
+  {
+   "id": "401811430",
+   "uid": "s:1100~l:1109~e:401811430",
+   "date": "2026-08-20T04:00Z",
+   "endDate": "2026-08-23T04:00Z",
+   "name": "LIV Golf Indianapolis",
+   "shortName": "LIV Golf Indianapolis",
+   "primary": true,
+   "hasPlayerStats": false,
+   "hasCourseStats": false,
+   "purse": 40100000,
+   "displayPurse": "$40,100,000",
+   "league": {
+    "id": "1109",
+    "name": "LIV Golf Invitational Series",
+    "abbreviation": "LIV",
+    "shortName": "LIV",
+    "slug": "liv"
+   },
+   "season": {
+    "year": 2026
+   },
+   "seasonType": {
+    "id": "2",
+    "name": "Regular Season"
+   },
+   "week": {},
+   "tournament": {
+    "id": "5099",
+    "displayName": "Indianapolis",
+    "major": false,
+    "scoringSystem": {
+     "id": "1",
+     "name": "Medal"
+    },
+    "numberOfRounds": 4,
+    "cutRound": 0,
+    "cutScore": 0,
+    "cutCount": 0
+   },
+   "status": {
+    "type": {
+     "id": "3",
+     "name": "STATUS_FINAL",
+     "state": "post",
+     "completed": true,
+     "description": "Final"
+    }
+   },
+   "winner": {
+    "id": "5289812",
+    "displayName": "Michael La Sasso"
+   },
+   "defendingChampion": {
+    "athlete": {
+     "id": "10404",
+     "displayName": "Sebastián Muñoz",
+     "amateur": false
+    },
+    "displayName": ""
+   },
+   "playoffType": {
+    "id": -1,
+    "description": "None",
+    "minimumHoles": 0
+   },
+   "competitions": [
+    {
+     "id": "401811430",
+     "uid": "s:1100~l:1109~e:401811430~c:401811430",
+     "date": "2026-08-20T04:00Z",
+     "endDate": "2026-08-23T04:00Z",
+     "recent": false,
+     "onWatchESPN": false,
+     "dataFormat": "API",
+     "status": {
+      "period": 4,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Complete"
+      }
+     },
+     "broadcasts": [
+      {
+       "media": {
+        "id": "148",
+        "slug": "fox",
+        "name": "FOX",
+        "shortName": "FOX",
+        "callLetters": "FOX"
+       },
+       "lang": "en",
+       "region": "us"
+      },
+      {
+       "media": {
+        "id": "777",
+        "slug": "fox-sports-app",
+        "name": "Fox Sports App",
+        "shortName": "Fox Sports App",
+        "callLetters": "Fox Sports App"
+       },
+       "lang": "en",
+       "region": "us"
+      }
+     ],
+     "competitors": [
+      {
+       "id": "5289812",
+       "uid": "s:1100~a:5289812",
+       "movement": 0,
+       "earnings": 0.0,
+       "sortOrder": 1,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-08-23T18:05Z",
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-5(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "1",
+         "displayName": "1",
+         "isTie": false
+        }
+       },
+       "score": {
+        "value": 262.0,
+        "displayValue": "-18"
+       },
+       "linescores": [
+        {
+         "value": 71.0,
+         "displayValue": "+1",
+         "period": 1,
+         "teeTime": "2026-08-20T17:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 60.0,
+         "displayValue": "-10",
+         "period": 2,
+         "startPosition": 47,
+         "teeTime": "2026-08-21T16:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-4",
+         "period": 3,
+         "startPosition": 5,
+         "teeTime": "2026-08-22T15:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 65.0,
+         "displayValue": "-5",
+         "period": 4,
+         "startPosition": 1,
+         "currentPosition": 1,
+         "teeTime": "2026-08-23T18:05Z",
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -18.0,
+         "displayValue": "-18"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "--"
+        }
+       ],
+       "athlete": {
+        "id": "5289812",
+        "uid": "s:1100~a:5289812",
+        "guid": "06799167-3cb2-3c79-98e3-308b62b5d0c8",
+        "displayName": "Michael La Sasso",
+        "shortName": "M. La Sasso",
+        "lastName": "La Sasso",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+         "alt": "USA"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "USA",
+         "stateAbbreviation": "NC"
+        }
+       }
+      },
+      {
+       "id": "9780",
+       "uid": "s:1100~a:9780",
+       "movement": -8,
+       "earnings": 0.0,
+       "sortOrder": 2,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-08-23T18:05Z",
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-7(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "2",
+         "displayName": "2",
+         "isTie": false
+        }
+       },
+       "score": {
+        "value": 263.0,
+        "displayValue": "-17"
+       },
+       "linescores": [
+        {
+         "value": 67.0,
+         "displayValue": "-3",
+         "period": 1,
+         "teeTime": "2026-08-20T17:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-3",
+         "period": 2,
+         "startPosition": 25,
+         "teeTime": "2026-08-21T16:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-4",
+         "period": 3,
+         "startPosition": 20,
+         "teeTime": "2026-08-22T15:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 63.0,
+         "displayValue": "-7",
+         "period": 4,
+         "startPosition": 10,
+         "currentPosition": 2,
+         "teeTime": "2026-08-23T18:05Z",
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -17.0,
+         "displayValue": "-17"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "--"
+        }
+       ],
+       "athlete": {
+        "id": "9780",
+        "uid": "s:1100~a:9780",
+        "guid": "f7192f24-1537-e91b-de6f-3548d5989626",
+        "displayName": "Jon Rahm",
+        "shortName": "J. Rahm",
+        "lastName": "Rahm",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+         "alt": "Spain"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "ESP"
+        }
+       }
+      },
+      {
+       "id": "10046",
+       "uid": "s:1100~a:10046",
+       "movement": -7,
+       "earnings": 0.0,
+       "sortOrder": 3,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-08-23T18:05Z",
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-6(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "3",
+         "displayName": "T3",
+         "isTie": true
+        }
+       },
+       "score": {
+        "value": 264.0,
+        "displayValue": "-16"
+       },
+       "linescores": [
+        {
+         "value": 65.0,
+         "displayValue": "-5",
+         "period": 1,
+         "teeTime": "2026-08-20T17:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-2",
+         "period": 2,
+         "startPosition": 12,
+         "teeTime": "2026-08-21T16:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-3",
+         "period": 3,
+         "startPosition": 15,
+         "currentPosition": 10,
+         "teeTime": "2026-08-22T15:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 64.0,
+         "displayValue": "-6",
+         "period": 4,
+         "startPosition": 10,
+         "currentPosition": 3,
+         "teeTime": "2026-08-23T18:05Z",
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -16.0,
+         "displayValue": "-16"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "--"
+        }
+       ],
+       "athlete": {
+        "id": "10046",
+        "uid": "s:1100~a:10046",
+        "guid": "b9dfbb7c-0b61-caad-280f-512c677e8e8f",
+        "displayName": "Bryson DeChambeau",
+        "shortName": "B. DeChambeau",
+        "lastName": "DeChambeau",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+         "alt": "USA"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "USA",
+         "stateAbbreviation": "CA"
+        }
+       }
+      },
+      {
+       "id": "158",
+       "uid": "s:1100~a:158",
+       "movement": -3,
+       "earnings": 0.0,
+       "sortOrder": 4,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-08-23T18:05Z",
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-5(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "3",
+         "displayName": "T3",
+         "isTie": true
+        }
+       },
+       "score": {
+        "value": 264.0,
+        "displayValue": "-16"
+       },
+       "linescores": [
+        {
+         "value": 64.0,
+         "displayValue": "-6",
+         "period": 1,
+         "currentPosition": 4,
+         "teeTime": "2026-08-20T17:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-1",
+         "period": 2,
+         "startPosition": 4,
+         "currentPosition": 15,
+         "teeTime": "2026-08-21T16:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-4",
+         "period": 3,
+         "startPosition": 15,
+         "currentPosition": 6,
+         "teeTime": "2026-08-22T15:15Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 65.0,
+         "displayValue": "-5",
+         "period": 4,
+         "startPosition": 6,
+         "currentPosition": 3,
+         "teeTime": "2026-08-23T18:05Z",
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -16.0,
+         "displayValue": "-16"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "--"
+        }
+       ],
+       "athlete": {
+        "id": "158",
+        "uid": "s:1100~a:158",
+        "guid": "fc44a867-4815-2a0b-f86a-fe55e86d3311",
+        "displayName": "Sergio Garcia",
+        "shortName": "S. Garcia",
+        "lastName": "Garcia",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+         "alt": "Spain"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "ESP"
+        }
+       }
+      }
+     ],
+     "holeByHoleSource": {
+      "id": "0",
+      "state": "none",
+      "description": "none"
+     },
+     "scoringSystem": {
+      "id": "1",
+      "name": "Medal"
+     }
+    }
+   ],
+   "courses": [
+    {
+     "id": "11324",
+     "name": "The Club at Chatham Hills",
+     "totalYards": 7273,
+     "shotsToPar": 70,
+     "parIn": 36,
+     "parOut": 34,
+     "host": true,
+     "holes": [
+      {
+       "number": 1,
+       "shotsToPar": 4,
+       "totalYards": 448
+      },
+      {
+       "number": 2,
+       "shotsToPar": 4,
+       "totalYards": 405
+      },
+      {
+       "number": 3,
+       "shotsToPar": 3,
+       "totalYards": 155
+      },
+      {
+       "number": 4,
+       "shotsToPar": 4,
+       "totalYards": 377
+      },
+      {
+       "number": 5,
+       "shotsToPar": 4,
+       "totalYards": 470
+      },
+      {
+       "number": 6,
+       "shotsToPar": 4,
+       "totalYards": 491
+      },
+      {
+       "number": 7,
+       "shotsToPar": 4,
+       "totalYards": 431
+      },
+      {
+       "number": 8,
+       "shotsToPar": 4,
+       "totalYards": 544
+      },
+      {
+       "number": 9,
+       "shotsToPar": 3,
+       "totalYards": 226
+      },
+      {
+       "number": 10,
+       "shotsToPar": 4,
+       "totalYards": 473
+      },
+      {
+       "number": 11,
+       "shotsToPar": 4,
+       "totalYards": 397
+      },
+      {
+       "number": 12,
+       "shotsToPar": 3,
+       "totalYards": 141
+      },
+      {
+       "number": 13,
+       "shotsToPar": 4,
+       "totalYards": 438
+      },
+      {
+       "number": 14,
+       "shotsToPar": 5,
+       "totalYards": 522
+      },
+      {
+       "number": 15,
+       "shotsToPar": 3,
+       "totalYards": 221
+      },
+      {
+       "number": 16,
+       "shotsToPar": 4,
+       "totalYards": 446
+      },
+      {
+       "number": 17,
+       "shotsToPar": 4,
+       "totalYards": 463
+      },
+      {
+       "number": 18,
+       "shotsToPar": 5,
+       "totalYards": 625
+      }
+     ],
+     "address": {
+      "city": "Westfield",
+      "state": "IN",
+      "country": "USA",
+      "zipCode": "46074"
+     }
+    }
+   ]
+  }
+ ]
+}

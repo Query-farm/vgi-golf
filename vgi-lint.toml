@@ -1,0 +1,27 @@
+location = "uv run --project . vgi-golf"
+select = ["ALL"]
+fail_on = "warning"
+
+ignore = [
+  { code = "VGI311", kind = "tooling-bug", reason = """\
+Each parameterless all_* scan is exposed as its corresponding table (all_tours backs tours, \
+all_current_leaderboard backs current_leaderboard, and so on). The rule only recognizes \
+matching names, but a function and table cannot share a name inside one schema; the \
+deliberate all_* names avoid those collisions.\
+""" },
+]
+
+[per_object."golf.main.all_tours"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of the tours table, which the liv_indianapolis_2026 task exercises; teaching agents to call the implementation function would undermine the table abstraction, and the Haybarn E2E test executes it." }]
+
+[per_object."golf.main.all_current_leaderboard"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of current_leaderboard, which the pga_tour_this_week task exercises; the Haybarn E2E test executes the scan directly." }]
+
+[per_object."golf.main.all_current_schedule"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of current_schedule, which the pga_tour_this_week task exercises; the Haybarn E2E test executes the scan directly." }]
+
+[per_object."golf.main.all_current_player_stats"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of current_player_stats, which the fedex_and_world_leaders task exercises; the Haybarn E2E test executes the scan directly." }]
+
+[per_object."golf.main.all_current_world_rankings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of current_world_rankings, which the fedex_and_world_leaders task exercises; the Haybarn E2E test executes the scan directly." }]

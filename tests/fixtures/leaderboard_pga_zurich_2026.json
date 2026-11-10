@@ -1,0 +1,598 @@
+{
+ "events": [
+  {
+   "id": "401811943",
+   "uid": "s:1100~l:1106~e:401811943",
+   "date": "2026-04-23T04:00Z",
+   "endDate": "2026-04-26T04:00Z",
+   "name": "Zurich Classic of New Orleans",
+   "shortName": "Zurich Classic of New Orleans",
+   "primary": true,
+   "hasPlayerStats": false,
+   "hasCourseStats": true,
+   "purse": 9500000,
+   "displayPurse": "$9,500,000",
+   "league": {
+    "id": "1106",
+    "name": "PGA Tour",
+    "abbreviation": "PGA",
+    "shortName": "PGA Tour",
+    "slug": "pga"
+   },
+   "season": {
+    "year": 2026
+   },
+   "seasonType": {
+    "id": "2",
+    "name": "Regular Season"
+   },
+   "week": {},
+   "tournament": {
+    "id": "12",
+    "displayName": "Zurich Classic of New Orleans",
+    "major": false,
+    "scoringSystem": {
+     "id": "5",
+     "name": "Teamstroke"
+    },
+    "numberOfRounds": 4,
+    "cutRound": 2,
+    "cutScore": -10,
+    "cutCount": 35
+   },
+   "status": {
+    "type": {
+     "id": "3",
+     "name": "STATUS_FINAL",
+     "state": "post",
+     "completed": true,
+     "description": "Final"
+    }
+   },
+   "winner": {
+    "id": "132535",
+    "displayName": "M. Fitzpatrick / A. Fitzpatrick",
+    "roster": [
+     {
+      "playerId": 9037,
+      "athlete": {
+       "id": "9037",
+       "displayName": "Matt Fitzpatrick",
+       "shortName": "M. Fitzpatrick"
+      }
+     },
+     {
+      "playerId": 4364865,
+      "athlete": {
+       "id": "4364865",
+       "displayName": "Alex Fitzpatrick",
+       "shortName": "A. Fitzpatrick"
+      }
+     }
+    ]
+   },
+   "defendingChampion": {
+    "displayName": "A. Novak / B. Griffin",
+    "roster": [
+     {
+      "playerId": 11332,
+      "athlete": {
+       "id": "11332",
+       "displayName": "Andrew Novak",
+       "shortName": "A. Novak"
+      }
+     },
+     {
+      "playerId": 4404992,
+      "athlete": {
+       "id": "4404992",
+       "displayName": "Ben Griffin",
+       "shortName": "B. Griffin"
+      }
+     }
+    ]
+   },
+   "playoffType": {
+    "id": -1,
+    "description": "None",
+    "minimumHoles": 0
+   },
+   "competitions": [
+    {
+     "id": "11724",
+     "uid": "s:1100~l:1106~e:401811943~c:11724",
+     "date": "2026-04-23T04:00Z",
+     "endDate": "2026-04-26T04:00Z",
+     "description": "Zurich Classic of New Orleans",
+     "recent": false,
+     "onWatchESPN": false,
+     "dataFormat": "API",
+     "status": {
+      "period": 4,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Complete"
+      }
+     },
+     "broadcasts": [
+      {
+       "media": {
+        "id": "44",
+        "slug": "cbs",
+        "name": "CBS",
+        "shortName": "CBS",
+        "callLetters": "CBS"
+       },
+       "lang": "en",
+       "region": "us"
+      },
+      {
+       "media": {
+        "id": "79",
+        "slug": "cnbc",
+        "name": "CNBC",
+        "shortName": "CNBC",
+        "callLetters": "CNBC"
+       },
+       "lang": "en",
+       "region": "us"
+      },
+      {
+       "media": {
+        "id": "755",
+        "slug": "espnplus",
+        "name": "ESPN+",
+        "shortName": "ESPN+",
+        "callLetters": "ESPN+"
+       },
+       "lang": "en",
+       "region": "us"
+      },
+      {
+       "media": {
+        "id": "760",
+        "slug": "golf-channel",
+        "name": "Golf Channel",
+        "shortName": "Golf Chnl",
+        "callLetters": "Golf Chnl"
+       },
+       "lang": "en",
+       "region": "us"
+      },
+      {
+       "media": {
+        "id": "792",
+        "slug": "paramountplus",
+        "name": "Paramount+",
+        "shortName": "Paramount+",
+        "callLetters": "Paramount+"
+       },
+       "lang": "en",
+       "region": "us"
+      }
+     ],
+     "notes": [
+      {
+       "text": "Zurich Classic of New Orleans"
+      }
+     ],
+     "type": {
+      "id": "1",
+      "text": "tournament"
+     },
+     "competitors": [
+      {
+       "id": "132535",
+       "uid": "s:1100~l:1106~t:132535",
+       "movement": 0,
+       "earnings": 1372750.0,
+       "sortOrder": 1,
+       "featured": false,
+       "homeAway": "unknown",
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-04-26T17:58Z",
+        "hole": 18,
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-1(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "1",
+         "displayName": "1",
+         "isTie": false
+        }
+       },
+       "score": {
+        "value": 257.0,
+        "displayValue": "-31"
+       },
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -31.0,
+         "displayValue": "-31"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$686,375"
+        },
+        {
+         "name": "cupPoints",
+         "value": 200.0,
+         "displayValue": "200"
+        }
+       ],
+       "team": {
+        "displayName": "M. Fitzpatrick / A. Fitzpatrick"
+       },
+       "roster": [
+        {
+         "playerId": 9037,
+         "athlete": {
+          "id": "9037",
+          "uid": "s:1100~a:9037",
+          "displayName": "Matt Fitzpatrick",
+          "shortName": "M. Fitzpatrick",
+          "lastName": "Fitzpatrick",
+          "amateur": false,
+          "flag": {
+           "href": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+           "alt": "England"
+          },
+          "birthPlace": {
+           "countryAbbreviation": "ENG"
+          }
+         }
+        },
+        {
+         "playerId": 4364865,
+         "athlete": {
+          "id": "4364865",
+          "uid": "s:1100~a:4364865",
+          "displayName": "Alex Fitzpatrick",
+          "shortName": "A. Fitzpatrick",
+          "lastName": "Fitzpatrick",
+          "amateur": false,
+          "flag": {
+           "href": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+           "alt": "England"
+          },
+          "birthPlace": {
+           "countryAbbreviation": "ENG"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "id": "132542",
+       "uid": "s:1100~l:1106~t:132542",
+       "movement": 0,
+       "earnings": 927438.0,
+       "sortOrder": 2,
+       "featured": false,
+       "homeAway": "unknown",
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-04-26T17:47Z",
+        "hole": 18,
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-4(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "2",
+         "displayName": "T2",
+         "isTie": true
+        }
+       },
+       "score": {
+        "value": 258.0,
+        "displayValue": "-30"
+       },
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -30.0,
+         "displayValue": "-30"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$463,719"
+        },
+        {
+         "name": "cupPoints",
+         "value": 134.0,
+         "displayValue": "134"
+        }
+       ],
+       "team": {
+        "displayName": "A. Smalley / H. Springer"
+       },
+       "roster": [
+        {
+         "playerId": 9484,
+         "athlete": {
+          "id": "9484",
+          "uid": "s:1100~a:9484",
+          "displayName": "Alex Smalley",
+          "shortName": "A. Smalley",
+          "lastName": "Smalley",
+          "amateur": false,
+          "flag": {
+           "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+           "alt": "USA"
+          },
+          "birthPlace": {
+           "countryAbbreviation": "USA",
+           "stateAbbreviation": "NY"
+          }
+         }
+        },
+        {
+         "playerId": 10562,
+         "athlete": {
+          "id": "10562",
+          "uid": "s:1100~a:10562",
+          "displayName": "Hayden Springer",
+          "shortName": "H. Springer",
+          "lastName": "Springer",
+          "amateur": false,
+          "flag": {
+           "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+           "alt": "USA"
+          },
+          "birthPlace": {
+           "countryAbbreviation": "USA",
+           "stateAbbreviation": "TN"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "id": "132548",
+       "uid": "s:1100~l:1106~t:132548",
+       "movement": -3,
+       "earnings": 927438.0,
+       "sortOrder": 3,
+       "featured": false,
+       "homeAway": "unknown",
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-04-26T17:36Z",
+        "hole": 18,
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-7(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "2",
+         "displayName": "T2",
+         "isTie": true
+        }
+       },
+       "score": {
+        "value": 258.0,
+        "displayValue": "-30"
+       },
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -30.0,
+         "displayValue": "-30"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$463,719"
+        },
+        {
+         "name": "cupPoints",
+         "value": 134.0,
+         "displayValue": "134"
+        }
+       ],
+       "team": {
+        "displayName": "K. Reitan / K. Ventura"
+       },
+       "roster": [
+        {
+         "playerId": 4348470,
+         "athlete": {
+          "id": "4348470",
+          "uid": "s:1100~a:4348470",
+          "displayName": "Kristoffer Reitan",
+          "shortName": "K. Reitan",
+          "lastName": "Reitan",
+          "amateur": false,
+          "flag": {
+           "href": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
+           "alt": "Norway"
+          },
+          "birthPlace": {
+           "countryAbbreviation": "NOR"
+          }
+         }
+        },
+        {
+         "playerId": 4351896,
+         "athlete": {
+          "id": "4351896",
+          "uid": "s:1100~a:4351896",
+          "displayName": "Kristoffer Ventura",
+          "shortName": "K. Ventura",
+          "lastName": "Ventura",
+          "amateur": false,
+          "flag": {
+           "href": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
+           "alt": "Norway"
+          }
+         }
+        }
+       ]
+      }
+     ],
+     "holeByHoleSource": {
+      "id": "2",
+      "state": "full",
+      "description": "feed"
+     },
+     "scoringSystem": {
+      "id": "5",
+      "name": "Teamstroke"
+     }
+    }
+   ],
+   "courses": [
+    {
+     "id": "197",
+     "name": "TPC Louisiana",
+     "totalYards": 7425,
+     "shotsToPar": 72,
+     "parIn": 36,
+     "parOut": 36,
+     "host": true,
+     "holes": [
+      {
+       "number": 1,
+       "shotsToPar": 4,
+       "totalYards": 399
+      },
+      {
+       "number": 2,
+       "shotsToPar": 5,
+       "totalYards": 548
+      },
+      {
+       "number": 3,
+       "shotsToPar": 3,
+       "totalYards": 221
+      },
+      {
+       "number": 4,
+       "shotsToPar": 4,
+       "totalYards": 482
+      },
+      {
+       "number": 5,
+       "shotsToPar": 4,
+       "totalYards": 438
+      },
+      {
+       "number": 6,
+       "shotsToPar": 4,
+       "totalYards": 476
+      },
+      {
+       "number": 7,
+       "shotsToPar": 5,
+       "totalYards": 561
+      },
+      {
+       "number": 8,
+       "shotsToPar": 4,
+       "totalYards": 372
+      },
+      {
+       "number": 9,
+       "shotsToPar": 3,
+       "totalYards": 207
+      },
+      {
+       "number": 10,
+       "shotsToPar": 4,
+       "totalYards": 390
+      },
+      {
+       "number": 11,
+       "shotsToPar": 5,
+       "totalYards": 575
+      },
+      {
+       "number": 12,
+       "shotsToPar": 4,
+       "totalYards": 492
+      },
+      {
+       "number": 13,
+       "shotsToPar": 4,
+       "totalYards": 403
+      },
+      {
+       "number": 14,
+       "shotsToPar": 3,
+       "totalYards": 216
+      },
+      {
+       "number": 15,
+       "shotsToPar": 4,
+       "totalYards": 490
+      },
+      {
+       "number": 16,
+       "shotsToPar": 4,
+       "totalYards": 355
+      },
+      {
+       "number": 17,
+       "shotsToPar": 3,
+       "totalYards": 215
+      },
+      {
+       "number": 18,
+       "shotsToPar": 5,
+       "totalYards": 585
+      }
+     ],
+     "address": {
+      "city": "Avondale",
+      "state": "LA",
+      "country": "USA",
+      "zipCode": "70094"
+     }
+    }
+   ]
+  }
+ ]
+}

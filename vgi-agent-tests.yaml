@@ -1,0 +1,89 @@
+# Grader-only data for the public vgi.agent_test_tasks prompts in vgi_golf/worker.py.
+# Historical tasks grade by exact comparison with reference_sql. Tasks over the live
+# current_* tables grade with check_sql invariants, because upstream data moves between
+# the analyst's answer and grading.
+tasks:
+  - name: masters_2026_top_ten
+    reference_sql: >-
+      SELECT position, player_name, score_to_par
+      FROM golf.main.leaderboard(event_id := 401811941)
+      ORDER BY sort_order
+      LIMIT 10
+    success_criteria: >-
+      Uses leaderboard with event_id 401811941, orders by sort_order, and returns Rory
+      McIlroy at -12 first.
+
+  - name: masters_2026_birdies
+    reference_sql: >-
+      SELECT count(*) AS birdies
+      FROM golf.main.player_scorecard(401811941, 9478)
+      WHERE score_type = 'BIRDIE'
+    success_criteria: >-
+      Uses player_scorecard for event 401811941 and player 9478 and counts BIRDIE holes.
+
+  - name: augusta_par_threes
+    reference_sql: >-
+      SELECT hole, yards
+      FROM golf.main.course_holes(401811941)
+      WHERE par = 3
+      ORDER BY hole
+    success_criteria: >-
+      Uses course_holes for the 2026 Masters and filters par = 3.
+
+  - name: pga_2025_winners
+    reference_sql: >-
+      SELECT start_date, event_name, winner_name
+      FROM golf.main.schedule(season := 2025)
+      ORDER BY start_date, event_id
+    success_criteria: >-
+      Uses schedule with season 2025 and returns one row per tournament with its winner.
+
+  - name: fedex_2025_leaders
+    reference_sql: >-
+      SELECT fedex_cup_rank, player_name, fedex_cup_points
+      FROM golf.main.season_player_stats(season := 2025)
+      ORDER BY fedex_cup_rank
+      LIMIT 5
+    success_criteria: >-
+      Uses season_player_stats for 2025 ordered by fedex_cup_rank.
+
+  - name: liv_indianapolis_2026
+    reference_sql: >-
+      SELECT tour FROM golf.main.tours WHERE name = 'LIV Golf';
+      SELECT position, player_name, score_to_par
+      FROM golf.main.leaderboard(tour := 'liv', event_id := 401811430)
+      ORDER BY sort_order
+      LIMIT 5
+    success_criteria: >-
+      Finds the liv tour slug and uses leaderboard with tour 'liv' and event 401811430.
+
+  - name: scheffler_profile
+    reference_sql: >-
+      SELECT birth_date, birth_city, birth_state, college
+      FROM golf.main.player(9478)
+    success_criteria: >-
+      Uses player(9478) and reports 1996-06-21, Dallas, Texas and the University of Texas.
+
+  - name: pga_tour_this_week
+    check_sql: >-
+      SELECT (SELECT count(*) FROM golf.main.current_leaderboard) > 0
+         AND (SELECT count(*) FROM golf.main.current_schedule WHERE completed) > 0
+    success_criteria: >-
+      Uses current_leaderboard for the event and its leader (sort_order = 1) and counts
+      completed rows in current_schedule.
+
+  - name: fedex_and_world_leaders
+    check_sql: >-
+      SELECT (SELECT count(*) FROM golf.main.current_player_stats WHERE fedex_cup_rank = 1) >= 1
+         AND (SELECT count(*) FROM golf.main.current_world_rankings WHERE rank = 1) >= 1
+    success_criteria: >-
+      Uses current_player_stats ordered by fedex_cup_rank and current_world_rankings at rank 1.
+
+  - name: japan_world_ranking
+    check_sql: >-
+      SELECT count(*) >= 1
+      FROM golf.main.world_rankings(max_rank := 2000)
+      WHERE country_code = 'JPN'
+    success_criteria: >-
+      Uses world_rankings with max_rank 2000 (the current table stops at 1000) and counts
+      rows with country_code JPN.

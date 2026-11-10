@@ -1,0 +1,538 @@
+{
+ "pagination": {
+  "count": 4,
+  "limit": 50,
+  "page": 1,
+  "pages": 1
+ },
+ "league": {
+  "id": "1106",
+  "uid": "s:1100~l:1106",
+  "name": "PGA Tour",
+  "abbreviation": "PGA",
+  "slug": "pga",
+  "shortName": "PGA Tour"
+ },
+ "athletes": [
+  {
+   "athlete": {
+    "id": "9478",
+    "uid": "s:1100~a:9478",
+    "guid": "38cbeebe-aac8-fb36-dce0-cf45436086e4",
+    "firstName": "Scottie",
+    "lastName": "Scheffler",
+    "displayName": "Scottie Scheffler",
+    "shortName": "S. Scheffler",
+    "debutYear": 2014,
+    "status": {
+     "id": "1",
+     "name": "Active",
+     "type": "active",
+     "abbreviation": "Active"
+    },
+    "age": 30,
+    "flag": {
+     "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "alt": "USA",
+     "rel": [
+      "country-flag"
+     ]
+    }
+   },
+   "categories": [
+    {
+     "name": "general",
+     "displayName": "Own General",
+     "totals": [
+      "$30,937,524",
+      "4986",
+      "20",
+      "78",
+      "19",
+      "13",
+      "3",
+      "67.9",
+      "312.7",
+      "63.9",
+      "72.9",
+      "1.694",
+      "0",
+      "53.0",
+      "4.821"
+     ],
+     "values": [
+      30937524.0,
+      4986.0,
+      20.0,
+      78.0,
+      19.0,
+      13.0,
+      3.0,
+      67.85897,
+      312.7,
+      63.944954,
+      72.86324,
+      1.6940372,
+      null,
+      53.04348,
+      4.820513
+     ],
+     "ranks": [
+      "-",
+      "1",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    }
+   ],
+   "lastTournament": {
+    "endDate": "2026-09-26T21:00:00Z",
+    "name": "Presidents Cup",
+    "shortName": "Presidents Cup"
+   }
+  },
+  {
+   "athlete": {
+    "id": "9037",
+    "uid": "s:1100~a:9037",
+    "guid": "a11204a7-ef27-3f00-a28e-358ee5984e77",
+    "firstName": "Matt",
+    "lastName": "Fitzpatrick",
+    "displayName": "Matt Fitzpatrick",
+    "shortName": "M. Fitzpatrick",
+    "debutYear": 2013,
+    "status": {
+     "id": "1",
+     "name": "Active",
+     "type": "active",
+     "abbreviation": "Active"
+    },
+    "age": 32,
+    "flag": {
+     "href": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+     "alt": "England",
+     "rel": [
+      "country-flag"
+     ]
+    }
+   },
+   "categories": [
+    {
+     "name": "general",
+     "displayName": "Own General",
+     "splitId": "0",
+     "totals": [
+      "$14,679,817",
+      "3463",
+      "21",
+      "78",
+      "19",
+      "8",
+      "3",
+      "69.0",
+      "306.3",
+      "66.4",
+      "69.7",
+      "1.757",
+      "0",
+      "51.5",
+      "4.167"
+     ],
+     "values": [
+      14679817.0,
+      3463.0,
+      21.0,
+      78.0,
+      19.0,
+      8.0,
+      3.0,
+      69.03846,
+      306.3,
+      66.42066,
+      69.72935,
+      1.7568948,
+      null,
+      51.53846,
+      4.1666665
+     ],
+     "ranks": [
+      "-",
+      "2",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    }
+   ],
+   "lastTournament": {
+    "endDate": "2026-10-03T21:00:00Z",
+    "name": "Alfred Dunhill Links Championship",
+    "shortName": "Alfred Dunhill Links Championship"
+   }
+  },
+  {
+   "athlete": {
+    "id": "11119",
+    "uid": "s:1100~a:11119",
+    "guid": "44d75406-fd2f-49e2-ff9a-e3be72e82cf2",
+    "firstName": "Wyndham",
+    "lastName": "Clark",
+    "displayName": "Wyndham Clark",
+    "shortName": "W. Clark",
+    "debutYear": 2017,
+    "status": {
+     "id": "1",
+     "name": "Active",
+     "type": "active",
+     "abbreviation": "Active"
+    },
+    "age": 32,
+    "flag": {
+     "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "alt": "USA",
+     "rel": [
+      "country-flag"
+     ]
+    }
+   },
+   "categories": [
+    {
+     "name": "general",
+     "displayName": "Own General",
+     "splitId": "0",
+     "totals": [
+      "$14,661,436",
+      "3292",
+      "25",
+      "84",
+      "18",
+      "6",
+      "3",
+      "69.2",
+      "313.2",
+      "58.5",
+      "66.1",
+      "1.698",
+      "0",
+      "53.1",
+      "4.381"
+     ],
+     "values": [
+      14661436.0,
+      3292.0,
+      25.0,
+      84.0,
+      18.0,
+      6.0,
+      3.0,
+      69.166664,
+      313.2,
+      58.54701,
+      66.07143,
+      1.6976976,
+      null,
+      53.076923,
+      4.3809524
+     ],
+     "ranks": [
+      "-",
+      "3",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    }
+   ],
+   "lastTournament": {
+    "endDate": "2026-10-31T21:00:00Z",
+    "name": "VidantaWorld Mexico Open",
+    "shortName": "VidantaWorld Mexico Open"
+   }
+  },
+  {
+   "athlete": {
+    "id": "4425906",
+    "uid": "s:1100~a:4425906",
+    "guid": "43c55459-a359-d86e-e2a9-54961c57a033",
+    "firstName": "Cameron",
+    "lastName": "Young",
+    "displayName": "Cameron Young",
+    "shortName": "C. Young",
+    "debutYear": 2019,
+    "status": {
+     "id": "1",
+     "name": "Active",
+     "type": "active",
+     "abbreviation": "Active"
+    },
+    "age": 29,
+    "flag": {
+     "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "alt": "USA",
+     "rel": [
+      "country-flag"
+     ]
+    }
+   },
+   "categories": [
+    {
+     "name": "general",
+     "displayName": "Own General",
+     "splitId": "0",
+     "totals": [
+      "$15,068,482",
+      "3206",
+      "20",
+      "80",
+      "20",
+      "8",
+      "2",
+      "69.2",
+      "318.3",
+      "61.1",
+      "68.4",
+      "1.762",
+      "0",
+      "52.3",
+      "4.088"
+     ],
+     "values": [
+      15068482.0,
+      3206.0,
+      20.0,
+      80.0,
+      20.0,
+      8.0,
+      2.0,
+      69.2375,
+      318.3,
+      61.071426,
+      68.40278,
+      1.7624365,
+      null,
+      52.272724,
+      4.0875
+     ],
+     "ranks": [
+      "-",
+      "4",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    }
+   ],
+   "lastTournament": {
+    "endDate": "2026-09-26T21:00:00Z",
+    "name": "Presidents Cup",
+    "shortName": "Presidents Cup"
+   }
+  }
+ ],
+ "currentSeason": {
+  "year": 2026,
+  "displayName": "2026",
+  "startDate": "2026-01-08T05:00:00.000+00:00",
+  "endDate": "2026-12-13T05:00:00.000+00:00",
+  "type": {
+   "id": "2",
+   "type": 2,
+   "name": "Regular Season",
+   "startDate": "2026-01-08T05:00:00.000+00:00",
+   "endDate": "2026-12-13T05:00:00.000+00:00",
+   "week": {}
+  }
+ },
+ "requestedSeason": {
+  "year": 2026,
+  "displayName": "2026",
+  "startDate": "2026-01-08T05:00:00.000+00:00",
+  "endDate": "2026-12-13T05:00:00.000+00:00",
+  "type": {
+   "id": "2",
+   "type": 2,
+   "name": "Regular Season",
+   "startDate": "2026-01-08T05:00:00.000+00:00",
+   "endDate": "2026-12-13T05:00:00.000+00:00",
+   "week": {}
+  }
+ },
+ "glossary": [
+  {
+   "abbreviation": "AVG",
+   "displayName": "Scoring average per round"
+  },
+  {
+   "abbreviation": "BIRD/RND",
+   "displayName": "Birdies per round"
+  },
+  {
+   "abbreviation": "CUPPTS",
+   "displayName": "FedExCup Points"
+  },
+  {
+   "abbreviation": "CUTS",
+   "displayName": "Cuts made"
+  },
+  {
+   "abbreviation": "DRV ACC",
+   "displayName": "Driving accuracy %"
+  },
+  {
+   "abbreviation": "EARNINGS",
+   "displayName": "Official money won"
+  },
+  {
+   "abbreviation": "EVENTS",
+   "displayName": "Tournaments played"
+  },
+  {
+   "abbreviation": "GIRPCT",
+   "displayName": "Greens In Regulation %"
+  },
+  {
+   "abbreviation": "RNDS",
+   "displayName": "Rounds played"
+  },
+  {
+   "abbreviation": "SAVEPCT",
+   "displayName": "Save Percentage"
+  },
+  {
+   "abbreviation": "SAVES",
+   "displayName": "Sand save %"
+  },
+  {
+   "abbreviation": "STROKESPERHOLE",
+   "displayName": "Putts per hole"
+  },
+  {
+   "abbreviation": "TOP10",
+   "displayName": "Top 10 finishes"
+  },
+  {
+   "abbreviation": "WINS",
+   "displayName": "Wins"
+  },
+  {
+   "abbreviation": "YDS/DRV",
+   "displayName": "Driving distance (in yards)"
+  }
+ ],
+ "categories": [
+  {
+   "name": "general",
+   "displayName": "Own General",
+   "labels": [
+    "EARNINGS",
+    "CUPPTS",
+    "EVENTS",
+    "RNDS",
+    "CUTS",
+    "TOP10",
+    "WINS",
+    "AVG",
+    "YDS/DRV",
+    "DRV ACC",
+    "GIRPCT",
+    "STROKESPERHOLE",
+    "SAVES",
+    "SAVEPCT",
+    "BIRD/RND"
+   ],
+   "names": [
+    "amount",
+    "cupPoints",
+    "tournamentsPlayed",
+    "roundsPlayed",
+    "cutsMade",
+    "topTenFinishes",
+    "wins",
+    "scoringAverage",
+    "yardsPerDrive",
+    "driveAccuracyPct",
+    "greensInRegPct",
+    "strokesPerHole",
+    "sandSaves",
+    "savePct",
+    "birdiesPerRound"
+   ],
+   "displayNames": [
+    "Official money won",
+    "FedExCup Points",
+    "Tournaments played",
+    "Rounds played",
+    "Cuts made",
+    "Top 10 finishes",
+    "Wins",
+    "Scoring average per round",
+    "Driving distance (in yards)",
+    "Driving accuracy %",
+    "Greens In Regulation %",
+    "Putts per hole",
+    "Sand save %",
+    "Save Percentage",
+    "Birdies per round"
+   ],
+   "descriptions": [
+    "The total amount of money the player has earned.",
+    "The total points the player has earned in the FedExCup points race.",
+    "The number of tournaments played by the player.",
+    "The total number of rounds of golf the player has played.",
+    "The total number of cuts the player has made.",
+    "The number of top ten finished the player has.",
+    "The number of tournaments the player has won.",
+    "The player's weighted scoring average.",
+    "The average yards the player has driven the ball.",
+    "The percentage of time a tee shot comes to rest in the fairway.",
+    "The percentage of time a player was able to hit the green in regulation.",
+    "The average number of strokes per hole.",
+    "The percentage of sand shots that hit the green and were followed by only one putt to hole out.",
+    "The percentage of sand shots that hit the green and were followed by only one putt to hole out.",
+    "The number of birdies the player has per round of golf played."
+   ]
+  }
+ ],
+ "lastUpdated": "2026/11/09"
+}

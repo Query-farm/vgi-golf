@@ -1,0 +1,191 @@
+{
+ "rankingsList": [
+  {
+   "id": 14474888,
+   "rank": 1,
+   "player": {
+    "id": 18417,
+    "firstName": "Scottie",
+    "lastName": "Scheffler",
+    "fullName": "Scottie Scheffler",
+    "birthDate": "1996-06-21T00:00:00",
+    "gender": "M",
+    "isAmateur": false,
+    "country": {
+     "id": 237,
+     "name": "United States",
+     "iocCode": "USA",
+     "code2": "US",
+     "code3": "USA",
+     "region": {
+      "id": 6,
+      "name": "North America",
+      "code": "NthAM"
+     }
+    }
+   },
+   "isTied": false,
+   "pointsLost": -536.9268283626989,
+   "pointsWon": 517.6349989159241,
+   "pointsTotal": 665.6639392123196,
+   "pointsAverage": 15.8491,
+   "divisorActual": 42,
+   "divisorApplied": 42,
+   "endLastYearRank": 1,
+   "lastWeekRank": 1,
+   "weekNumber": 0,
+   "weekId": 0,
+   "weekEndDate": null
+  },
+  {
+   "id": 14474889,
+   "rank": 2,
+   "player": {
+    "id": 10091,
+    "firstName": "Rory",
+    "lastName": "McIlroy",
+    "fullName": "Rory McIlroy",
+    "birthDate": "1989-05-04T00:00:00",
+    "gender": "M",
+    "isAmateur": false,
+    "country": {
+     "id": 1001,
+     "name": "Northern Ireland",
+     "iocCode": "NIR",
+     "code2": "",
+     "code3": "NIR",
+     "region": {
+      "id": 4,
+      "name": "Europe",
+      "code": "Eur"
+     }
+    }
+   },
+   "isTied": false,
+   "pointsLost": -347.63700272232984,
+   "pointsWon": 255.6684625310038,
+   "pointsTotal": 344.7498493291844,
+   "pointsAverage": 8.0174,
+   "divisorActual": 43,
+   "divisorApplied": 43,
+   "endLastYearRank": 2,
+   "lastWeekRank": 2,
+   "weekNumber": 0,
+   "weekId": 0,
+   "weekEndDate": null
+  },
+  {
+   "id": 14474890,
+   "rank": 3,
+   "player": {
+    "id": 17646,
+    "firstName": "Matt",
+    "lastName": "Fitzpatrick",
+    "fullName": "Matt Fitzpatrick",
+    "birthDate": "1994-09-01T00:00:00",
+    "gender": "M",
+    "isAmateur": false,
+    "country": {
+     "id": 253,
+     "name": "England",
+     "iocCode": "ENG",
+     "code2": "",
+     "code3": "ENG",
+     "region": {
+      "id": 4,
+      "name": "Europe",
+      "code": "Eur"
+     }
+    }
+   },
+   "isTied": false,
+   "pointsLost": -135.27793743747665,
+   "pointsWon": 319.3934613504525,
+   "pointsTotal": 334.26349446130587,
+   "pointsAverage": 6.8217,
+   "divisorActual": 49,
+   "divisorApplied": 49,
+   "endLastYearRank": 22,
+   "lastWeekRank": 3,
+   "weekNumber": 0,
+   "weekId": 0,
+   "weekEndDate": null
+  },
+  {
+   "id": 14474891,
+   "rank": 4,
+   "player": {
+    "id": 26651,
+    "firstName": "Cameron",
+    "lastName": "Young",
+    "fullName": "Cameron Young",
+    "birthDate": "1997-05-07T00:00:00",
+    "gender": "M",
+    "isAmateur": false,
+    "country": {
+     "id": 237,
+     "name": "United States",
+     "iocCode": "USA",
+     "code2": "US",
+     "code3": "USA",
+     "region": {
+      "id": 6,
+      "name": "North America",
+      "code": "NthAM"
+     }
+    }
+   },
+   "isTied": false,
+   "pointsLost": -150.76327841524616,
+   "pointsWon": 307.22062162650155,
+   "pointsTotal": 317.3614954663621,
+   "pointsAverage": 6.7524,
+   "divisorActual": 47,
+   "divisorApplied": 47,
+   "endLastYearRank": 19,
+   "lastWeekRank": 4,
+   "weekNumber": 0,
+   "weekId": 0,
+   "weekEndDate": null
+  },
+  {
+   "id": 14474892,
+   "rank": 5,
+   "player": {
+    "id": 23604,
+    "firstName": "Wyndham",
+    "lastName": "Clark",
+    "fullName": "Wyndham Clark",
+    "birthDate": "1993-12-09T00:00:00",
+    "gender": "M",
+    "isAmateur": false,
+    "country": {
+     "id": 237,
+     "name": "United States",
+     "iocCode": "USA",
+     "code2": "US",
+     "code3": "USA",
+     "region": {
+      "id": 6,
+      "name": "North America",
+      "code": "NthAM"
+     }
+    }
+   },
+   "isTied": false,
+   "pointsLost": -94.22159975238145,
+   "pointsWon": 295.4816669655243,
+   "pointsTotal": 296.4335775956658,
+   "pointsAverage": 5.9287,
+   "divisorActual": 50,
+   "divisorApplied": 50,
+   "endLastYearRank": 46,
+   "lastWeekRank": 5,
+   "weekNumber": 0,
+   "weekId": 0,
+   "weekEndDate": null
+  }
+ ],
+ "totalNumberOfPages": 1,
+ "totalNumberOfRankings": 5
+}
