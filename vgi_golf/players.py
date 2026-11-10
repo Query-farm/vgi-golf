@@ -86,19 +86,21 @@ class SeasonPlayerStatsFunction(TableFunctionGenerator[SeasonStatsArgs]):
                 "earnings, events, cuts made, top-10s, wins, scoring average, driving distance and "
                 "accuracy, greens in regulation, putts per hole, sand saves and birdies per round. "
                 "Named argument season (default current). PGA Tour only; ESPN publishes no "
-                "season statistics for the other tours."
+                "season statistics for the other tours. fedex_cup_rank is the points order; after "
+                "the TOUR Championship it differs from the final FedExCup finish. Unmeasured "
+                "golfers have NULL rounds and averages."
             ),
             md=(
                 "Season statistics from ESPN for the PGA Tour. Percentages are on a 0-100 scale. "
-                "Order by `fedex_cup_rank` for the FedExCup standings."
+                "Order by `fedex_cup_rank` for the FedExCup points standings."
             ),
             schema=SEASON_STATS_SCHEMA,
             examples=[
-                ("The 2025 FedExCup top ten.", _STATS_SQL),
+                ("The 2025 FedExCup points top ten.", _STATS_SQL),
                 ("Longest 2025 drivers with at least 40 rounds.", _DRIVING_SQL),
             ],
         )
-        examples = [FunctionExample(sql=_STATS_SQL, description="The 2025 FedExCup top ten")]
+        examples = [FunctionExample(sql=_STATS_SQL, description="The 2025 FedExCup points top ten")]
 
     @classmethod
     def cardinality(cls, params: object) -> TableCardinality:

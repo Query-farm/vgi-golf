@@ -1,0 +1,869 @@
+{
+ "season": {
+  "type": 2,
+  "year": 2026
+ },
+ "events": [
+  {
+   "id": "401850979",
+   "date": "2026-11-05T05:00Z",
+   "endDate": "2026-11-08T05:00Z",
+   "name": "World Wide Technology Championship",
+   "shortName": "World Wide Technology Championship",
+   "season": {
+    "year": 2026,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "status": {
+    "type": {
+     "id": "3",
+     "name": "STATUS_FINAL",
+     "state": "post",
+     "completed": true,
+     "description": "Final"
+    }
+   },
+   "competitions": [
+    {
+     "id": "401850979",
+     "date": "2026-11-05T05:00Z",
+     "endDate": "2026-11-08T05:00Z",
+     "broadcast": "Golf Chnl",
+     "competitors": [
+      {
+       "id": "5211425",
+       "uid": "s:1100~l:1106~a:5211425",
+       "type": "athlete",
+       "order": 1,
+       "score": "-25",
+       "athlete": {
+        "fullName": "Blades Brown",
+        "displayName": "Blades Brown",
+        "shortName": "B. Brown",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 1
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 2
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 3
+        },
+        {
+         "value": 63.0,
+         "displayValue": "-9",
+         "period": 4
+        },
+        {
+         "value": 8.0,
+         "displayValue": "-2",
+         "period": 5
+        },
+        {
+         "period": 402
+        }
+       ]
+      },
+      {
+       "id": "5077389",
+       "uid": "s:1100~l:1106~a:5077389",
+       "type": "athlete",
+       "order": 2,
+       "score": "-24",
+       "athlete": {
+        "fullName": "Ben James",
+        "displayName": "Ben James",
+        "shortName": "B. James",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 1
+        },
+        {
+         "value": 64.0,
+         "displayValue": "-8",
+         "period": 2
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 3
+        },
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 4
+        },
+        {
+         "value": 4.0,
+         "displayValue": "-1",
+         "period": 5
+        },
+        {
+         "period": 402
+        }
+       ]
+      },
+      {
+       "id": "8974",
+       "uid": "s:1100~l:1106~a:8974",
+       "type": "athlete",
+       "order": 3,
+       "score": "-22",
+       "athlete": {
+        "fullName": "Michael Kim",
+        "displayName": "Michael Kim",
+        "shortName": "M. Kim",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 73.0,
+         "displayValue": "+1",
+         "period": 1
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 2
+        },
+        {
+         "value": 63.0,
+         "displayValue": "-9",
+         "period": 3
+        },
+        {
+         "value": 64.0,
+         "displayValue": "-8",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "5075548",
+       "uid": "s:1100~l:1106~a:5075548",
+       "type": "athlete",
+       "order": 4,
+       "score": "-21",
+       "athlete": {
+        "fullName": "Kensei Hirata",
+        "displayName": "Kensei Hirata",
+        "shortName": "K. Hirata",
+        "flag": {
+         "alt": "Japan"
+        }
+       },
+       "linescores": [
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 1
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 2
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 3
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "5150294",
+       "uid": "s:1100~l:1106~a:5150294",
+       "type": "athlete",
+       "order": 5,
+       "score": "-20",
+       "athlete": {
+        "fullName": "David Ford",
+        "displayName": "David Ford",
+        "shortName": "D. Ford",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 1
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 2
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 3
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "10481",
+       "uid": "s:1100~l:1106~a:10481",
+       "type": "athlete",
+       "order": 6,
+       "score": "-19",
+       "athlete": {
+        "fullName": "Alvaro Ortiz",
+        "displayName": "Alvaro Ortiz",
+        "shortName": "A. Ortiz",
+        "flag": {
+         "alt": "Mexico"
+        }
+       },
+       "linescores": [
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 1
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 2
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 3
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "10054",
+       "uid": "s:1100~l:1106~a:10054",
+       "type": "athlete",
+       "order": 7,
+       "score": "-19",
+       "athlete": {
+        "fullName": "Denny McCarthy",
+        "displayName": "Denny McCarthy",
+        "shortName": "D. McCarthy",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 1
+        },
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 2
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 3
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "9506",
+       "uid": "s:1100~l:1106~a:9506",
+       "type": "athlete",
+       "order": 8,
+       "score": "-18",
+       "athlete": {
+        "fullName": "Jordan Smith",
+        "displayName": "Jordan Smith",
+        "shortName": "J. Smith",
+        "flag": {
+         "alt": "England"
+        }
+       },
+       "linescores": [
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 1
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 2
+        },
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 3
+        },
+        {
+         "value": 63.0,
+         "displayValue": "-9",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "6001",
+       "uid": "s:1100~l:1106~a:6001",
+       "type": "athlete",
+       "order": 9,
+       "score": "-18",
+       "athlete": {
+        "fullName": "S\u00e9amus Power",
+        "displayName": "S\u00e9amus Power",
+        "shortName": "S. Power",
+        "flag": {
+         "alt": "Ireland"
+        }
+       },
+       "linescores": [
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 1
+        },
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 2
+        },
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 3
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "8906",
+       "uid": "s:1100~l:1106~a:8906",
+       "type": "athlete",
+       "order": 10,
+       "score": "-18",
+       "athlete": {
+        "fullName": "Keith Mitchell",
+        "displayName": "Keith Mitchell",
+        "shortName": "K. Mitchell",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 1
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 2
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 3
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "5076021",
+       "uid": "s:1100~l:1106~a:5076021",
+       "type": "athlete",
+       "order": 11,
+       "score": "-18",
+       "athlete": {
+        "fullName": "Ryan Gerard",
+        "displayName": "Ryan Gerard",
+        "shortName": "R. Gerard",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 1
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 2
+        },
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 3
+        },
+        {
+         "value": 71.0,
+         "displayValue": "-1",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "4404992",
+       "uid": "s:1100~l:1106~a:4404992",
+       "type": "athlete",
+       "order": 12,
+       "score": "-17",
+       "athlete": {
+        "fullName": "Ben Griffin",
+        "displayName": "Ben Griffin",
+        "shortName": "B. Griffin",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 1
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 2
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 3
+        },
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "6011",
+       "uid": "s:1100~l:1106~a:6011",
+       "type": "athlete",
+       "order": 13,
+       "score": "-17",
+       "athlete": {
+        "fullName": "Beau Hossler",
+        "displayName": "Beau Hossler",
+        "shortName": "B. Hossler",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 1
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 2
+        },
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 3
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "5143175",
+       "uid": "s:1100~l:1106~a:5143175",
+       "type": "athlete",
+       "order": 14,
+       "score": "-17",
+       "athlete": {
+        "fullName": "Sudarshan Yellamaraju",
+        "displayName": "Sudarshan Yellamaraju",
+        "shortName": "S. Yellamaraju",
+        "flag": {
+         "alt": "Canada"
+        }
+       },
+       "linescores": [
+        {
+         "value": 71.0,
+         "displayValue": "-1",
+         "period": 1
+        },
+        {
+         "value": 63.0,
+         "displayValue": "-9",
+         "period": 2
+        },
+        {
+         "value": 71.0,
+         "displayValue": "-1",
+         "period": 3
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "5461860",
+       "uid": "s:1100~l:1106~a:5461860",
+       "type": "athlete",
+       "order": 15,
+       "score": "-17",
+       "athlete": {
+        "fullName": "Jay Leng",
+        "displayName": "Jay Leng",
+        "shortName": "J. Leng",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 1
+        },
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 2
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 3
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "4589438",
+       "uid": "s:1100~l:1106~a:4589438",
+       "type": "athlete",
+       "order": 16,
+       "score": "-17",
+       "athlete": {
+        "fullName": "Harry Hall",
+        "displayName": "Harry Hall",
+        "shortName": "H. Hall",
+        "flag": {
+         "alt": "England"
+        }
+       },
+       "linescores": [
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 1
+        },
+        {
+         "value": 71.0,
+         "displayValue": "-1",
+         "period": 2
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 3
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "3449",
+       "uid": "s:1100~l:1106~a:3449",
+       "type": "athlete",
+       "order": 17,
+       "score": "-17",
+       "athlete": {
+        "fullName": "Chris Kirk",
+        "displayName": "Chris Kirk",
+        "shortName": "C. Kirk",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 63.0,
+         "displayValue": "-9",
+         "period": 1
+        },
+        {
+         "value": 72.0,
+         "displayValue": "E",
+         "period": 2
+        },
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 3
+        },
+        {
+         "value": 71.0,
+         "displayValue": "-1",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "4589406",
+       "uid": "s:1100~l:1106~a:4589406",
+       "type": "athlete",
+       "order": 18,
+       "score": "-16",
+       "athlete": {
+        "fullName": "Isaiah Salinda",
+        "displayName": "Isaiah Salinda",
+        "shortName": "I. Salinda",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 1
+        },
+        {
+         "value": 71.0,
+         "displayValue": "-1",
+         "period": 2
+        },
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 3
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "5692",
+       "uid": "s:1100~l:1106~a:5692",
+       "type": "athlete",
+       "order": 19,
+       "score": "-16",
+       "athlete": {
+        "fullName": "Peter Malnati",
+        "displayName": "Peter Malnati",
+        "shortName": "P. Malnati",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 1
+        },
+        {
+         "value": 64.0,
+         "displayValue": "-8",
+         "period": 2
+        },
+        {
+         "value": 73.0,
+         "displayValue": "+1",
+         "period": 3
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "9600",
+       "uid": "s:1100~l:1106~a:9600",
+       "type": "athlete",
+       "order": 20,
+       "score": "-16",
+       "athlete": {
+        "fullName": "Paul Peterson",
+        "displayName": "Paul Peterson",
+        "shortName": "P. Peterson",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 1
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 2
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 3
+        },
+        {
+         "value": 71.0,
+         "displayValue": "-1",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "5215013",
+       "uid": "s:1100~l:1106~a:5215013",
+       "type": "athlete",
+       "order": 21,
+       "score": "-15",
+       "athlete": {
+        "fullName": "Jackson Koivun",
+        "displayName": "Jackson Koivun",
+        "shortName": "J. Koivun",
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 1
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 2
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 3
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 4
+        }
+       ]
+      },
+      {
+       "id": "5882",
+       "uid": "s:1100~l:1106~a:5882",
+       "type": "athlete",
+       "order": 22,
+       "score": "-15",
+       "athlete": {
+        "fullName": "Emiliano Grillo",
+        "displayName": "Emiliano Grillo",
+        "shortName": "E. Grillo",
+        "flag": {
+         "alt": "Argentina"
+        }
+       },
+       "linescores": [
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 1
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 2
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 3
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 4
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

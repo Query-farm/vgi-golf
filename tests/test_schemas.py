@@ -51,6 +51,7 @@ def test_masters_leaderboard() -> None:
     assert winner["event_completed"] is True
     assert winner["season"] == 2026
     assert winner["position_number"] == 1
+    assert not any(row["in_playoff"] for row in rows)
     assert winner["tee_time"] == datetime(2026, 4, 12, 18, 25, tzinfo=UTC)
     tied = rows[2]
     assert tied["position"] == "T3" and tied["position_number"] == 3 and tied["is_tied"] is True
@@ -125,6 +126,92 @@ def test_schedule_winners_including_team_and_cup_events() -> None:
     assert ryder["winner_name"] == "EUR"
     assert ryder["winning_score"] == "15"
     assert ryder["winning_score_to_par"] is None
+    assert valero["playoff"] is False and ryder["playoff"] is False
+
+
+def test_playoff_holes_are_removed_from_the_winning_score() -> None:
+    # ESPN's season scoreboard reports Blades Brown at -25: his -23 regulation
+    # total plus a two-hole playoff at -2. The official winning score is -23.
+    [row] = schemas.flatten_schedule(load("scoreboard_pga_wwt_playoff_2026.json"), "pga")
+    assert row["winner_name"] == "Blades Brown"
+    assert row["winning_score"] == "-23"
+    assert row["winning_score_to_par"] == -23
+    assert row["playoff"] is True
+
+
+def test_playoff_score_already_excluding_playoff_is_kept() -> None:
+    # The 2025 Masters scoreboard shows McIlroy at -11 without his playoff
+    # birdie; rebuilding from regulation rounds must not subtract it again.
+    def golfer(order: int, score: str, rounds: list[str], playoff: str | None) -> dict:
+        lines = [{"period": n, "value": 70.0, "displayValue": v} for n, v in enumerate(rounds, 1)]
+        if playoff is not None:
+            lines.append({"period": 5, "value": 4.0, "displayValue": playoff})
+        return {
+            "id": str(order),
+            "order": order,
+            "score": score,
+            "linescores": lines,
+            "athlete": {"displayName": f"Golfer {order}"},
+        }
+
+    field = [
+        golfer(1, "-11", ["E", "-6", "-6", "+1"], "-1"),
+        golfer(2, "-11", ["-7", "-1", "+3", "-6"], "E"),
+        golfer(3, "-9", ["-2", "-2", "-2", "-3"], None),
+        golfer(4, "-8", ["-2", "-2", "-2", "-2"], None),
+    ]
+    payload = {
+        "events": [
+            {"id": "1", "status": {"type": {"completed": True}}, "competitions": [{"competitors": field}]}
+        ]
+    }
+    [row] = schemas.flatten_schedule(payload, "pga")
+    assert row["winner_name"] == "Golfer 1"
+    assert row["winning_score_to_par"] == -11 and row["playoff"] is True
+
+
+def _season(field: list[dict]) -> dict:
+    return {
+        "events": [
+            {"id": "1", "status": {"type": {"completed": True}}, "competitions": [{"competitors": field}]}
+        ]
+    }
+
+
+def _entry(order: int, score: str, name: str) -> dict:
+    lines = [{"period": n, "value": 66.0, "displayValue": "-1"} for n in range(1, 5)]
+    return {
+        "id": str(order),
+        "order": order,
+        "score": score,
+        "linescores": lines,
+        "team": {"displayName": name},
+    }
+
+
+def test_misordered_stroke_play_winner_is_the_lowest_score() -> None:
+    # The 2026 Zurich Classic scoreboard lists the winning Fitzpatricks (-31)
+    # at order 35 and the runners-up (-30) at order 1.
+    field = [
+        _entry(1, "-30", "Smalley/Springer"),
+        _entry(2, "-30", "Reitan/Ventura"),
+        _entry(3, "-28", "Martin/Crowe"),
+        _entry(4, "-28", "Neergaard-Petersen/Olesen"),
+        _entry(5, "-27", "E"),
+        _entry(35, "-31", "Fitzpatrick/Fitzpatrick"),
+    ]
+    [row] = schemas.flatten_schedule(_season(field), "pga")
+    assert row["winner_name"] == "Fitzpatrick/Fitzpatrick" and row["winning_score_to_par"] == -31
+
+
+def test_stableford_and_match_play_keep_the_listed_order() -> None:
+    # Barracuda Championship scores are Stableford points (higher is better).
+    stableford = [_entry(1, "+47", "Ryan Gerard"), _entry(2, "+44", "B"), _entry(3, "+7", "C")]
+    [row] = schemas.flatten_schedule(_season(stableford), "pga")
+    assert row["winner_name"] == "Ryan Gerard"
+    match_play = [_entry(1, "-1", "Nelly Korda"), _entry(2, "-6", "B"), _entry(3, "-2", "C")]
+    [row] = schemas.flatten_schedule(_season(match_play), "lpga")
+    assert row["winner_name"] == "Nelly Korda"
 
 
 def test_upcoming_event_has_no_winner() -> None:
@@ -177,6 +264,33 @@ def test_season_stats_follow_category_names_not_positions() -> None:
     assert "fedex_cup_rank" not in row
 
 
+def test_season_stats_without_measured_rounds_are_null_not_zero() -> None:
+    # ESPN reports 0 rounds and 0.0 for every average for golfers it does not
+    # measure (Ben James: 13 events, 11 cuts made, "0" rounds in 2026).
+    payload = {
+        "categories": [
+            {"name": "general", "names": ["tournamentsPlayed", "cutsMade", "roundsPlayed", "amount"]},
+            {"name": "scoring", "names": ["scoringAverage", "birdiesPerRound"]},
+        ],
+        "athletes": [
+            {
+                "athlete": {"id": "5077389", "displayName": "Ben James"},
+                "categories": [
+                    {"name": "general", "values": [13, 11, 0, 2653920], "ranks": []},
+                    {"name": "scoring", "values": [0.0, 0.0], "ranks": []},
+                ],
+            }
+        ],
+    }
+    [row] = schemas.flatten_season_stats(payload)
+    assert row["events_played"] == 13 and row["cuts_made"] == 11
+    assert row["earnings"] == Decimal("2653920.00")
+    assert row["rounds_played"] is None
+    assert row["scoring_average"] is None and row["birdies_per_round"] is None
+    batch = schemas.batch_from_rows([row], schemas.SEASON_STATS_SCHEMA)
+    assert batch.column("scoring_average").null_count == 1
+
+
 def test_player_profile() -> None:
     [row] = schemas.flatten_player(load("athlete_scheffler.json"))
     assert row["birth_date"] == date(1996, 6, 21)
@@ -198,6 +312,11 @@ def test_world_rankings() -> None:
     assert top["events_played"] == 42
     assert rows[1]["country_code"] == "NIR"
     assert schemas.flatten_world_rankings([{"rank": None}, "junk"]) == []
+    # OWGR reports 0 for "not ranked" in the history columns.
+    [debut] = schemas.flatten_world_rankings(
+        [{"rank": 900, "player": {"id": 1}, "lastWeekRank": 0, "endLastYearRank": 0}]
+    )
+    assert debut["last_week_rank"] is None and debut["end_last_year_rank"] is None
 
 
 @pytest.mark.parametrize(
@@ -231,3 +350,15 @@ def test_tour_rows_cover_six_tours() -> None:
     rows = schemas.tour_rows()
     assert [row["tour"] for row in rows] == ["pga", "eur", "liv", "lpga", "champions-tour", "ntw"]
     assert [row["tour"] for row in rows if row["has_season_stats"]] == ["pga"]
+
+
+def test_playoff_leaderboard_keeps_regulation_rounds() -> None:
+    rows = schemas.flatten_leaderboard(load("leaderboard_pga_wwt_playoff_2026.json"), "pga")
+    winner, runner_up, third = rows
+    assert winner["player_name"] == "Blades Brown" and winner["position"] == "1"
+    assert winner["score_to_par"] == runner_up["score_to_par"] == -23
+    assert (winner["round_1"], winner["round_2"], winner["round_3"], winner["round_4"]) == (66, 68, 68, 63)
+    assert winner["total_strokes"] == 265 and winner["rounds_played"] == 4
+    assert winner["in_playoff"] is True and runner_up["in_playoff"] is True
+    assert winner["current_round"] == 5 and winner["thru"] == 2
+    assert third["in_playoff"] is False and third["current_round"] == 4

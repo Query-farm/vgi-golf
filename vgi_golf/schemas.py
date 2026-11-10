@@ -7,6 +7,7 @@ the parsing rules are unit-testable against recorded fixtures.
 from __future__ import annotations
 
 import re
+from collections import Counter
 from collections.abc import Iterable, Mapping, Sequence
 from datetime import UTC, date, datetime
 from decimal import Decimal, InvalidOperation
@@ -85,8 +86,18 @@ LEADERBOARD_SCHEMA = pa.schema(
         field("round_3", pa.int32(), "Strokes in round 3; NULL when not played (for example after a cut)."),
         field("round_4", pa.int32(), "Strokes in round 4; NULL when not played."),
         field("rounds_played", pa.int32(), "Number of regulation rounds with a recorded score."),
-        field("current_round", pa.int32(), "Round number (1-based) the player is on or last completed."),
-        field("thru", pa.int32(), "Holes completed in the current round; 18 when the round is finished."),
+        field(
+            "current_round",
+            pa.int32(),
+            "Round number (1-based) the player is on or last completed; one past the final round "
+            "for players who went to a playoff.",
+        ),
+        field(
+            "thru",
+            pa.int32(),
+            "Holes completed in the current round (or playoff holes played); 18 when a round is finished.",
+        ),
+        field("in_playoff", pa.bool_(), "Whether the player took part in a playoff for the title."),
         field("tee_time", TIMESTAMP, "Tee time for the player's current or last round, in UTC."),
         field(
             "earnings", MONEY, "Prize money in US dollars for this entry; meaningful once the event is final."
@@ -94,7 +105,8 @@ LEADERBOARD_SCHEMA = pa.schema(
         field(
             "fedex_cup_points",
             pa.float64(),
-            "FedExCup points earned at this event (points); NULL when ESPN reports none.",
+            "FedExCup points earned at this event (points); 0 for non-members and wherever ESPN "
+            "publishes none (for example FedExCup Fall events).",
         ),
         field("movement", pa.int32(), "Positions gained (positive) or lost during the current round."),
     ]
@@ -129,7 +141,13 @@ SCHEDULE_SCHEMA = pa.schema(
         field(
             "winning_score_to_par",
             pa.int32(),
-            "Winning score in strokes relative to par; NULL for match-play or cup events.",
+            "Winning score in strokes relative to par, excluding playoff holes; NULL for match-play "
+            "or cup events. Stableford events (the Barracuda Championship) carry points here.",
+        ),
+        field(
+            "playoff",
+            pa.bool_(),
+            "Whether the winner was decided in a playoff; NULL until the tournament is final.",
         ),
         field("broadcast", pa.string(), "US broadcast networks listed by ESPN."),
     ]
@@ -179,11 +197,21 @@ SEASON_STATS_SCHEMA = pa.schema(
         field("last_name", pa.string(), "Family name."),
         field("country", pa.string(), "Country the golfer represents, as ESPN labels the flag."),
         field("age", pa.int32(), "Current age in years."),
-        field("fedex_cup_rank", pa.int32(), "FedExCup standings rank (1 = points leader)."),
+        field(
+            "fedex_cup_rank",
+            pa.int32(),
+            "Rank by FedExCup points (1 = points leader). After the TOUR Championship this is the "
+            "points order, not the final FedExCup finish decided by starting strokes.",
+        ),
         field("fedex_cup_points", pa.float64(), "FedExCup points accumulated in the season (points)."),
         field("earnings", MONEY, "Official money won in US dollars."),
         field("events_played", pa.int32(), "Count of tournaments started this season."),
-        field("rounds_played", pa.int32(), "Count of official rounds completed this season."),
+        field(
+            "rounds_played",
+            pa.int32(),
+            "Count of measured official rounds this season; NULL (with the per-round averages) "
+            "when ESPN tracks none, typically for non-members.",
+        ),
         field("cuts_made", pa.int32(), "Count of tournaments in which the player survived the cut."),
         field("top_ten_finishes", pa.int32(), "Count of finishes in tenth place or better."),
         field("wins", pa.int32(), "Count of tournament victories this season."),
@@ -200,7 +228,11 @@ SEASON_STATS_SCHEMA = pa.schema(
         ),
         field("sand_save_pct", pa.float64(), "Percentage of greenside bunker saves (0-100)."),
         field("birdies_per_round", pa.float64(), "Average birdies per round."),
-        field("last_tournament_name", pa.string(), "Most recent tournament counted in the season totals."),
+        field(
+            "last_tournament_name",
+            pa.string(),
+            "The golfer's most recent tournament on any tour, as ESPN reports it.",
+        ),
         field("last_tournament_end_date", pa.date32(), "End date of that tournament."),
     ]
 )
@@ -261,8 +293,12 @@ WORLD_RANKINGS_SCHEMA = pa.schema(
         ),
         field("points_won", pa.float64(), "Ranking points won in the two-year window before decay (points)."),
         field("points_lost", pa.float64(), "Points lost to the ranking's time decay (negative)."),
-        field("last_week_rank", pa.int32(), "Rank in the previous weekly ranking."),
-        field("end_last_year_rank", pa.int32(), "Rank at the end of the previous calendar year."),
+        field("last_week_rank", pa.int32(), "Rank in the previous weekly ranking; NULL when unranked."),
+        field(
+            "end_last_year_rank",
+            pa.int32(),
+            "Rank at the end of the previous calendar year; NULL when the golfer was unranked then.",
+        ),
     ]
 )
 
@@ -367,6 +403,12 @@ def _clean(value: Any) -> str | None:
     return text or None
 
 
+def _rank(value: Any) -> int | None:
+    """A ranking position; OWGR uses 0 for "not ranked", which becomes NULL."""
+    rank = to_int(value)
+    return rank if rank is not None and rank > 0 else None
+
+
 def _stat(statistics: Any, name: str) -> Mapping[str, Any]:
     return next(
         (_mapping(value) for value in _list(statistics) if _mapping(value).get("name") == name),
@@ -468,6 +510,7 @@ def flatten_leaderboard(payload: Mapping[str, Any], tour: str) -> list[dict[str,
                         "rounds_played": len([key for key in rounds if 1 <= key <= 4]),
                         "current_round": to_int(status.get("period")),
                         "thru": to_int(status.get("thru")),
+                        "in_playoff": bool(status.get("playoff")),
                         "tee_time": to_timestamp(status.get("teeTime")),
                         "earnings": to_money(competitor.get("earnings")),
                         "fedex_cup_points": to_float(cup_points.get("value")),
@@ -511,12 +554,90 @@ def flatten_course_holes(payload: Mapping[str, Any], tour: str) -> list[dict[str
 
 
 def _winner(competitors: Sequence[Mapping[str, Any]]) -> Mapping[str, Any]:
+    """The tournament winner on a season scoreboard.
+
+    ESPN flags the winner on some tours. Elsewhere ``order`` is the finishing
+    order, with rare exceptions: the 2026 Zurich Classic lists the winning -31
+    team at order 35. When the leading entries' scores rise with ``order``
+    (ordinary stroke play), the lowest score to par among entries that
+    completed every regulation round wins, ``order`` breaking ties for
+    playoffs. Stableford (higher is better), match-play and cup events do not
+    order that way and keep ``order`` 1.
+    """
     flagged = [value for value in competitors if value.get("winner") is True]
     if flagged:
         return flagged[0]
     if any("winner" in value for value in competitors):
         return {}
-    return next((value for value in competitors if to_int(value.get("order")) == 1), {})
+    ranked = sorted(competitors, key=lambda value: to_int(value.get("order")) or 1_000_000)
+    first = ranked[0] if ranked else {}
+    leading = [to_par(value.get("score")) for value in ranked[:5]]
+    scores = [value for value in leading if value is not None]
+    stroke_play = len(scores) == len(leading) >= 2 and scores == sorted(scores)
+    regulation = _regulation_rounds(competitors)
+    if not stroke_play or regulation is None:
+        return first if to_int(first.get("order")) == 1 else {}
+    finishers = [
+        value
+        for value in ranked
+        if to_par(value.get("score")) is not None
+        and len([period for period in _scored_periods(value) if period <= regulation]) == regulation
+    ]
+    return min(finishers, key=lambda value: to_par(value.get("score")) or 0) if finishers else first
+
+
+def _scored_periods(competitor: Mapping[str, Any]) -> list[int]:
+    """Round numbers (including playoff periods) with a recorded stroke total."""
+    periods = []
+    for raw in _list(competitor.get("linescores")):
+        line = _mapping(raw)
+        period = to_int(line.get("period"))
+        if period is not None and period < 100 and to_int(line.get("value")):
+            periods.append(period)
+    return periods
+
+
+def _regulation_rounds(competitors: Sequence[Mapping[str, Any]]) -> int | None:
+    """The usual number of scored rounds among the top finishers (the field's regulation length).
+
+    Playoff participants carry an extra scored period, but they are a small
+    minority of the top 20, so the most common round count is regulation.
+    """
+    ranked = sorted(competitors, key=lambda value: to_int(value.get("order")) or 1_000_000)[:20]
+    counts = Counter(max(periods) for value in ranked if (periods := _scored_periods(value)))
+    # The most common round count wins; a tie goes to the shorter (regulation) length.
+    return min(counts, key=lambda rounds: (-counts[rounds], rounds)) if counts else None
+
+
+def _format_par(value: int) -> str:
+    return "E" if value == 0 else f"{value:+d}"
+
+
+def _winning_score(
+    winner: Mapping[str, Any], competitors: Sequence[Mapping[str, Any]]
+) -> tuple[str | None, bool]:
+    """The winner's regulation score and whether the event went to a playoff.
+
+    ESPN's season scoreboard folds playoff holes into many winners' ``score``
+    (for example -25 for a -23 total plus a two-hole playoff at -2), but not
+    all (the 2025 Masters shows -11). When there was a playoff, the score is
+    rebuilt from the regulation rounds' to-par values so it matches the
+    official result.
+    """
+    display = _clean(winner.get("score"))
+    regulation = _regulation_rounds(competitors)
+    if regulation is None:
+        return display, False
+    lines = [_mapping(raw) for raw in _list(winner.get("linescores"))]
+    periods = {to_int(line.get("period")): line for line in lines}
+    # Some tours list a playoff period without strokes (value 0, display "-").
+    playoff = any(period is not None and regulation < period < 100 for period in periods)
+    round_to_par = [
+        to_par(periods.get(number, {}).get("displayValue")) for number in range(1, regulation + 1)
+    ]
+    if playoff and to_par(display) is not None and all(value is not None for value in round_to_par):
+        display = _format_par(sum(value for value in round_to_par if value is not None))
+    return display, playoff
 
 
 def flatten_schedule(payload: Mapping[str, Any], tour: str) -> list[dict[str, Any]]:
@@ -535,7 +656,7 @@ def flatten_schedule(payload: Mapping[str, Any], tour: str) -> list[dict[str, An
         completed = bool(status.get("completed"))
         winner = _winner(competitors) if completed else {}
         winner_entity = _mapping(winner.get("athlete")) or _mapping(winner.get("team"))
-        winning_score = _clean(winner.get("score")) if winner else None
+        winning_score, playoff = _winning_score(winner, competitors) if winner else (None, None)
         rows.append(
             {
                 "tour": tour,
@@ -553,6 +674,7 @@ def flatten_schedule(payload: Mapping[str, Any], tour: str) -> list[dict[str, An
                 "winner_name": winner_entity.get("displayName") if winner else None,
                 "winning_score": winning_score,
                 "winning_score_to_par": to_par(winning_score),
+                "playoff": playoff,
                 "broadcast": _clean(first.get("broadcast")),
             }
         )
@@ -618,6 +740,18 @@ _STAT_COLUMNS = {
 }
 
 
+_MEASURED_COLUMNS = (
+    "rounds_played",
+    "scoring_average",
+    "driving_distance",
+    "driving_accuracy_pct",
+    "greens_in_regulation_pct",
+    "putts_per_hole",
+    "sand_save_pct",
+    "birdies_per_round",
+)
+
+
 def flatten_season_stats(payload: Mapping[str, Any]) -> list[dict[str, Any]]:
     """Flatten ESPN's byathlete statistics to one row per golfer.
 
@@ -656,6 +790,10 @@ def flatten_season_stats(payload: Mapping[str, Any]) -> list[dict[str, Any]]:
                     row[column] = parse(values[index])
                 if name == "cupPoints" and index < len(ranks):
                     row["fedex_cup_rank"] = to_int(ranks[index])
+        if not row.get("rounds_played"):
+            # Golfers without measured rounds (mostly non-members) carry 0 for
+            # every per-round statistic; 0 is not a real average, so emit NULL.
+            row.update(dict.fromkeys(_MEASURED_COLUMNS))
         last = _mapping(entry.get("lastTournament"))
         row["last_tournament_name"] = last.get("name")
         row["last_tournament_end_date"] = to_date(last.get("endDate"))
@@ -732,8 +870,8 @@ def flatten_world_rankings(rankings: Iterable[Any]) -> list[dict[str, Any]]:
                 "divisor_applied": to_int(entry.get("divisorApplied")),
                 "points_won": to_float(entry.get("pointsWon")),
                 "points_lost": to_float(entry.get("pointsLost")),
-                "last_week_rank": to_int(entry.get("lastWeekRank")),
-                "end_last_year_rank": to_int(entry.get("endLastYearRank")),
+                "last_week_rank": _rank(entry.get("lastWeekRank")),
+                "end_last_year_rank": _rank(entry.get("endLastYearRank")),
             }
         )
     return rows

@@ -210,7 +210,10 @@ _AGENT_TEST_TASKS = json.dumps(
             "prompt": "List the par-3 holes at Augusta National for the 2026 Masters and their yardages.",
         },
         {"name": "pga_2025_winners", "prompt": "List every 2025 PGA Tour event and who won it."},
-        {"name": "fedex_2025_leaders", "prompt": "Who were the top five in the 2025 FedExCup standings?"},
+        {
+            "name": "fedex_2025_leaders",
+            "prompt": "Which five PGA Tour players earned the most FedExCup points in 2025?",
+        },
         {
             "name": "liv_indianapolis_2026",
             "prompt": "Show the top five at the 2026 LIV Golf Indianapolis event (ESPN event 401811430).",
@@ -230,7 +233,10 @@ _AGENT_TEST_TASKS = json.dumps(
         },
         {
             "name": "fedex_and_world_leaders",
-            "prompt": "Who leads the FedExCup standings right now, and who is the world number one golfer?",
+            "prompt": (
+                "Who has the most FedExCup points this PGA Tour season, and who is the world "
+                "number one golfer?"
+            ),
         },
         {
             "name": "japan_world_ranking",

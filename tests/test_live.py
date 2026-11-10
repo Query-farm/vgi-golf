@@ -42,6 +42,18 @@ def test_pga_2025_schedule_has_known_winners() -> None:
     assert by_name["Masters Tournament"]["winner_name"] == "Rory McIlroy"
     assert by_name["Masters Tournament"]["start_date"] == date(2025, 4, 10)
     assert by_name["Ryder Cup"]["winner_name"] == "EUR"
+    # Playoff wins report the regulation score, whether or not ESPN's raw
+    # score already folded in the playoff holes.
+    assert by_name["Masters Tournament"]["winning_score_to_par"] == -11
+    assert by_name["Masters Tournament"]["playoff"] is True
+    assert by_name["Sony Open in Hawaii"]["winning_score_to_par"] == -16
+    assert by_name["TOUR Championship"]["playoff"] is False
+
+
+def test_season_stats_never_report_zero_averages() -> None:
+    rows = schemas.flatten_season_stats(api.fetch_season_stats(2026).payload)
+    assert all(row["scoring_average"] is None or row["scoring_average"] > 55 for row in rows)
+    assert all(row["driving_distance"] is None or row["driving_distance"] > 200 for row in rows)
 
 
 def test_pga_2025_season_stats() -> None:

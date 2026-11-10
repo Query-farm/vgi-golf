@@ -131,6 +131,13 @@ ORDER BY wins DESC;
 `winning_score_to_par` is `NULL` for cup and match-play events, such as the
 Ryder Cup. For those events, `winning_score` holds the points.
 
+`playoff` marks events decided in a playoff. ESPN's season scoreboard folds
+playoff holes into some winners' scores, so for playoff events the worker
+rebuilds `winning_score` from the regulation rounds: the 2026 World Wide
+Technology Championship shows Blades Brown at -23, not ESPN's -25. On a
+leaderboard, `in_playoff` marks the players who went to extra holes, and their
+`current_round` and `thru` describe the playoff.
+
 ### Hole-by-hole scorecards and course setup
 
 ```sql
@@ -168,7 +175,12 @@ ORDER BY driving_distance DESC
 LIMIT 10;
 ```
 
-Percentages use a 0-100 scale. Money is `DECIMAL(14,2)` US dollars.
+Percentages use a 0-100 scale. Money is `DECIMAL(14,2)` US dollars. Golfers
+ESPN does not measure (mostly non-members) have `NULL` rounds and per-round
+averages rather than ESPN's placeholder zeros. `fedex_cup_rank` orders the
+season's FedExCup points; once the TOUR Championship is played it is not the
+final FedExCup finish, which starting strokes decide (Scottie Scheffler led the
+2025 points while Tommy Fleetwood won the FedExCup).
 
 ### Players and the world ranking
 

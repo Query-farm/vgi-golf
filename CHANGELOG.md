@@ -15,5 +15,10 @@ All notable changes to this project are documented here.
 - Honest User-Agent, bounded retries with `Retry-After`, redirect following, a
   bounded in-process response cache with politeness floors, and overridable base
   URLs for hermetic tests.
+- Playoff handling: `schedule()` reports the regulation winning score (ESPN's
+  season scoreboard folds playoff holes into many winners' scores) plus a
+  `playoff` flag, and leaderboards carry `in_playoff`.
+- Season statistics emit `NULL`, not ESPN's placeholder zeros, for golfers
+  without measured rounds; OWGR "not ranked" history ranks (0) become `NULL`.
 - Hermetic Haybarn end-to-end test over recorded fixtures, opt-in live tests, and
   agent-simulation tasks graded by reference SQL or `check_sql`.

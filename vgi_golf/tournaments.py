@@ -271,7 +271,8 @@ class LeaderboardFunction(TableFunctionGenerator[LeaderboardArgs]):
                 "Pass tour => 'pga'|'eur'|'liv'|'lpga'|'champions-tour'|'ntw' and an event_id "
                 "from schedule(). Without event_id it returns the current or most recent event. "
                 "Order by sort_order for leaderboard order; position is text with a T tie prefix "
-                "and position_number is the numeric rank. Team events have entry_type = 'team'."
+                "and position_number is the numeric rank. Team events have entry_type = 'team'. "
+                "in_playoff marks players who went to a playoff."
             ),
             md=(
                 "Leaderboard for one tournament, one row per player (or pairing in team events). "
@@ -378,7 +379,8 @@ class ScheduleFunction(TableFunctionGenerator[ScheduleArgs]):
                 "One row per tournament in a tour season with dates, status, field size, winner "
                 "and winning score. Use it to find event_id values for leaderboard() and "
                 "player_scorecard(). Named arguments: tour (default 'pga') and season (default "
-                "current). winning_score_to_par is NULL for cup and match-play events."
+                "current). winning_score_to_par is NULL for cup and match-play events; playoff marks "
+                "events decided in a playoff, and the winning score excludes the playoff holes."
             ),
             md=(
                 "Season calendar with results. Completed events carry `winner_name` and "

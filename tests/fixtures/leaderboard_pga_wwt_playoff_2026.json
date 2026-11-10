@@ -1,0 +1,506 @@
+{
+ "events": [
+  {
+   "id": "401850979",
+   "uid": "s:1100~l:1106~e:401850979",
+   "date": "2026-11-05T05:00Z",
+   "endDate": "2026-11-08T05:00Z",
+   "name": "World Wide Technology Championship",
+   "shortName": "World Wide Technology Championship",
+   "season": {
+    "year": 2026
+   },
+   "status": {
+    "type": {
+     "id": "3",
+     "name": "STATUS_FINAL",
+     "state": "post",
+     "completed": true,
+     "description": "Final"
+    }
+   },
+   "competitions": [
+    {
+     "id": "401850979",
+     "uid": "s:1100~l:1106~e:401850979~c:401850979",
+     "date": "2026-11-05T05:00Z",
+     "endDate": "2026-11-08T05:00Z",
+     "recent": false,
+     "onWatchESPN": false,
+     "dataFormat": "API",
+     "status": {
+      "period": 5,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Complete"
+      }
+     },
+     "broadcasts": [
+      {
+       "media": {
+        "id": "760",
+        "slug": "golf-channel",
+        "name": "Golf Channel",
+        "shortName": "Golf Chnl",
+        "callLetters": "Golf Chnl"
+       },
+       "lang": "en",
+       "region": "us"
+      }
+     ],
+     "leaders": [
+      {
+       "name": "driveDistAvg",
+       "displayName": "Driving Distance",
+       "shortDisplayName": "Driving Distance",
+       "abbreviation": "YDS/DRV",
+       "leaders": [
+        {
+         "displayValue": "331.8",
+         "value": 331.8,
+         "athlete": {
+          "id": "11253",
+          "displayName": "Rasmus H\u00f8jgaard"
+         }
+        }
+       ]
+      },
+      {
+       "name": "fwysHit",
+       "displayName": "Driving Accuracy",
+       "shortDisplayName": "Driving Accuracy",
+       "abbreviation": "DRV ACC",
+       "leaders": [
+        {
+         "displayValue": "98.2",
+         "value": 98.21,
+         "athlete": {
+          "id": "8910",
+          "displayName": "Ben Silverman"
+         }
+        }
+       ]
+      },
+      {
+       "name": "gir",
+       "displayName": "GIR",
+       "shortDisplayName": "GIR",
+       "abbreviation": "GIR",
+       "leaders": [
+        {
+         "displayValue": "90.3",
+         "value": 90.28,
+         "athlete": {
+          "id": "4837368",
+          "displayName": "Pierceson Coody"
+         }
+        }
+       ]
+      },
+      {
+       "name": "puttsGirAvg",
+       "displayName": "Putts per GIR",
+       "shortDisplayName": "Putts per GIR",
+       "abbreviation": "PP GIR",
+       "leaders": [
+        {
+         "displayValue": "1.586",
+         "value": 1.586,
+         "athlete": {
+          "id": "5147097",
+          "displayName": "Karl Vilips"
+         }
+        }
+       ]
+      }
+     ],
+     "holeByHoleSource": {
+      "id": "2",
+      "state": "full",
+      "description": "feed"
+     },
+     "scoringSystem": {
+      "id": "1",
+      "name": "Medal"
+     },
+     "competitors": [
+      {
+       "id": "5211425",
+       "uid": "s:1100~a:5211425",
+       "movement": -8,
+       "earnings": 1080000.0,
+       "sortOrder": 1,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 5,
+        "teeTime": "2026-11-08T23:23Z",
+        "startHole": 18,
+        "thru": 2,
+        "displayThru": "2",
+        "playoff": true,
+        "behindCurrentRound": false,
+        "detail": "-9(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "1",
+         "displayName": "1",
+         "isTie": false
+        }
+       },
+       "score": {
+        "value": 265.0,
+        "displayValue": "-23"
+       },
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -23.0,
+         "displayValue": "-23"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$1,080,000"
+        },
+        {
+         "name": "cupPoints",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ],
+       "athlete": {
+        "id": "5211425",
+        "displayName": "Blades Brown",
+        "shortName": "B. Brown",
+        "lastName": "Brown",
+        "amateur": false,
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 1,
+         "inScore": 32,
+         "outScore": 34,
+         "currentPosition": 9,
+         "teeTime": "2026-11-05T14:03Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 2,
+         "inScore": 34,
+         "outScore": 34,
+         "startPosition": 9,
+         "currentPosition": 6,
+         "teeTime": "2026-11-06T18:38Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 3,
+         "inScore": 35,
+         "outScore": 33,
+         "startPosition": 6,
+         "currentPosition": 9,
+         "teeTime": "2026-11-07T16:58Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 63.0,
+         "displayValue": "-9",
+         "period": 4,
+         "inScore": 31,
+         "outScore": 32,
+         "startPosition": 9,
+         "currentPosition": 1,
+         "teeTime": "2026-11-08T17:09Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 8.0,
+         "displayValue": "-2",
+         "period": 5,
+         "inScore": 8,
+         "currentPosition": 1,
+         "teeTime": "2026-11-08T23:23Z",
+         "hasStream": false,
+         "isPlayoff": true
+        },
+        {
+         "period": 402,
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ]
+      },
+      {
+       "id": "5077389",
+       "uid": "s:1100~a:5077389",
+       "movement": 0,
+       "earnings": 654000.0,
+       "sortOrder": 2,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 5,
+        "teeTime": "2026-11-08T23:23Z",
+        "startHole": 18,
+        "thru": 1,
+        "displayThru": "1",
+        "playoff": true,
+        "behindCurrentRound": false,
+        "detail": "-2(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "2",
+         "displayName": "2",
+         "isTie": false
+        }
+       },
+       "score": {
+        "value": 265.0,
+        "displayValue": "-23"
+       },
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -23.0,
+         "displayValue": "-23"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$654,000"
+        },
+        {
+         "name": "cupPoints",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ],
+       "athlete": {
+        "id": "5077389",
+        "displayName": "Ben James",
+        "shortName": "B. James",
+        "lastName": "James",
+        "amateur": false,
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 1,
+         "inScore": 33,
+         "outScore": 32,
+         "currentPosition": 4,
+         "teeTime": "2026-11-05T18:49Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 64.0,
+         "displayValue": "-8",
+         "period": 2,
+         "inScore": 32,
+         "outScore": 32,
+         "startPosition": 4,
+         "currentPosition": 1,
+         "teeTime": "2026-11-06T14:14Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 3,
+         "inScore": 33,
+         "outScore": 33,
+         "startPosition": 1,
+         "currentPosition": 1,
+         "teeTime": "2026-11-07T17:42Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 4,
+         "inScore": 33,
+         "outScore": 37,
+         "startPosition": 1,
+         "currentPosition": 1,
+         "teeTime": "2026-11-08T17:42Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 4.0,
+         "displayValue": "-1",
+         "period": 5,
+         "inScore": 4,
+         "currentPosition": 2,
+         "teeTime": "2026-11-08T23:23Z",
+         "hasStream": false,
+         "isPlayoff": true
+        },
+        {
+         "period": 402,
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ]
+      },
+      {
+       "id": "8974",
+       "uid": "s:1100~a:8974",
+       "movement": -6,
+       "earnings": 414000.0,
+       "sortOrder": 3,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-11-08T17:09Z",
+        "hole": 18,
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18*",
+        "playoff": false,
+        "behindCurrentRound": true,
+        "detail": "-8(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "3",
+         "displayName": "3",
+         "isTie": false
+        }
+       },
+       "score": {
+        "value": 266.0,
+        "displayValue": "-22"
+       },
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -22.0,
+         "displayValue": "-22"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$414,000"
+        },
+        {
+         "name": "cupPoints",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ],
+       "athlete": {
+        "id": "8974",
+        "displayName": "Michael Kim",
+        "shortName": "M. Kim",
+        "lastName": "Kim",
+        "amateur": false,
+        "flag": {
+         "alt": "USA"
+        }
+       },
+       "linescores": [
+        {
+         "value": 73.0,
+         "displayValue": "+1",
+         "period": 1,
+         "inScore": 35,
+         "outScore": 38,
+         "currentPosition": 101,
+         "teeTime": "2026-11-05T19:11Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 2,
+         "inScore": 33,
+         "outScore": 33,
+         "startPosition": 102,
+         "currentPosition": 62,
+         "teeTime": "2026-11-06T14:36Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 63.0,
+         "displayValue": "-9",
+         "period": 3,
+         "inScore": 31,
+         "outScore": 32,
+         "startPosition": 62,
+         "currentPosition": 9,
+         "teeTime": "2026-11-07T16:58Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 64.0,
+         "displayValue": "-8",
+         "period": 4,
+         "inScore": 31,
+         "outScore": 33,
+         "startPosition": 9,
+         "currentPosition": 3,
+         "teeTime": "2026-11-08T17:09Z",
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

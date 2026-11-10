@@ -52,7 +52,7 @@ class _GolfHandler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
 
-def test_haybarn_attaches_and_queries_every_current_table() -> None:
+def test_haybarn_attaches_and_queries_every_table_and_backing_scan() -> None:
     server = ThreadingHTTPServer(("127.0.0.1", 0), _GolfHandler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
@@ -68,6 +68,12 @@ def test_haybarn_attaches_and_queries_every_current_table() -> None:
         "(SELECT count(*) FROM golf.main.current_world_rankings) AS rankings, "
         "(SELECT count(*) FROM golf.main.all_current_leaderboard()) AS leaderboard_scan, "
         "(SELECT count(*) FROM golf.main.all_tours()) AS tours_scan, "
+        "(SELECT count(*) FROM golf.main.all_current_schedule()) AS schedule_scan, "
+        "(SELECT count(*) FROM golf.main.all_current_player_stats()) AS stats_scan, "
+        "(SELECT count(*) FROM golf.main.all_current_world_rankings()) AS rankings_scan, "
+        "(SELECT count(*) FROM golf.main.schedule(season := 2025) WHERE completed) AS season_events, "
+        "(SELECT count(*) FROM golf.main.season_player_stats(season := 2026)) AS season_stats, "
+        "(SELECT count(*) FROM golf.main.world_rankings(max_rank := 3)) AS top_three, "
         "(SELECT count(*) FROM golf.main.player_scorecard(401811941, 9478)) AS holes, "
         "(SELECT count(*) FROM golf.main.course_holes(401811941)) AS course, "
         "(SELECT count(*) FROM golf.main.player(9478)) AS profile, "
@@ -98,7 +104,7 @@ def test_haybarn_attaches_and_queries_every_current_table() -> None:
         thread.join(timeout=5)
 
     assert (
-        "tours,leaderboard,schedule,stats,rankings,leaderboard_scan,tours_scan,holes,course,profile,winner"
-        in result.stdout
+        "tours,leaderboard,schedule,stats,rankings,leaderboard_scan,tours_scan,schedule_scan,stats_scan,"
+        "rankings_scan,season_events,season_stats,top_three,holes,course,profile,winner" in result.stdout
     ), result.stdout + result.stderr
-    assert "6,8,3,4,5,8,6,72,18,1,Rory McIlroy" in result.stdout, result.stdout + result.stderr
+    assert "6,8,3,4,5,8,6,3,4,5,3,4,3,72,18,1,Rory McIlroy" in result.stdout, result.stdout + result.stderr
