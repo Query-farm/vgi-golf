@@ -28,18 +28,18 @@ credentials, and it does not rehost or store any dataset.
 
 ## Quick start
 
-Install the released worker with `uv`:
+The worker is not published to PyPI. `uvx` runs the tagged release straight from
+GitHub and caches it after the first use:
 
 ```bash
-uv tool install vgi-golf
-vgi-golf
+uvx --from git+https://github.com/Query-farm/vgi-golf@v0.1.0 vgi-golf --help
 ```
 
 Launch Haybarn with the catalog pre-attached:
 
 ```bash
 uvx haybarn-cli \
-  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'golf' (TYPE vgi, LOCATION 'vgi-golf');" \
+  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'golf' (TYPE vgi, LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-golf@v0.1.0 vgi-golf');" \
   :memory:
 ```
 
@@ -50,7 +50,7 @@ INSTALL vgi FROM community;
 LOAD vgi;
 ATTACH 'golf' (
   TYPE vgi,
-  LOCATION 'vgi-golf'
+  LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-golf@v0.1.0 vgi-golf'
 );
 ```
 
@@ -238,7 +238,7 @@ authentication or an explicit decision to allow anonymous access:
 export VGI_SIGNING_KEY='a-long-random-secret-shared-by-every-replica'
 export VGI_BEARER_TOKENS='replace-with-a-random-token=haybarn'
 
-vgi-golf-http \
+uvx --from git+https://github.com/Query-farm/vgi-golf@v0.1.0 vgi-golf-http \
   --host 0.0.0.0 \
   --port 8000 \
   --cors-origins 'https://sql.example.com' \
@@ -324,8 +324,11 @@ scheduled live workflow runs the live tests and the executing lint one at a
 time, to keep the load on upstream sources low.
 
 Publishing is driven by releases. Create a GitHub release named `vX.Y.Z` that
-matches the version in `pyproject.toml`. CI then builds, attests and validates
-the distributions and publishes them through PyPI trusted publishing.
+matches the version in `pyproject.toml`. CI then builds, validates and attests
+the wheel and sdist, attaches them to the release, and publishes a
+multi-platform container image to `ghcr.io/query-farm/vgi-golf`. The package is
+not published to PyPI; install it from the release tag as shown in the quick
+start.
 
 ## License
 
