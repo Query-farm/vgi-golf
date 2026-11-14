@@ -1,0 +1,1193 @@
+{
+ "events": [
+  {
+   "id": "401811941",
+   "uid": "s:1100~l:1106~e:401811941",
+   "date": "2026-04-09T04:00Z",
+   "endDate": "2026-04-12T04:00Z",
+   "name": "Masters Tournament",
+   "shortName": "Masters Tournament",
+   "primary": true,
+   "hasPlayerStats": true,
+   "hasCourseStats": true,
+   "purse": 22500000,
+   "displayPurse": "$22,500,000",
+   "league": {
+    "id": "1106",
+    "name": "PGA Tour",
+    "abbreviation": "PGA",
+    "shortName": "PGA Tour",
+    "slug": "pga"
+   },
+   "season": {
+    "year": 2026
+   },
+   "seasonType": {
+    "id": "2",
+    "name": "Regular Season"
+   },
+   "week": {},
+   "tournament": {
+    "id": "15",
+    "displayName": "Masters Tournament",
+    "major": true,
+    "scoringSystem": {
+     "id": "1",
+     "name": "Medal"
+    },
+    "numberOfRounds": 4,
+    "cutRound": 2,
+    "cutScore": 4,
+    "cutCount": 50
+   },
+   "status": {
+    "type": {
+     "id": "3",
+     "name": "STATUS_FINAL",
+     "state": "post",
+     "completed": true,
+     "description": "Final"
+    }
+   },
+   "winner": {
+    "id": "3470",
+    "displayName": "Rory McIlroy"
+   },
+   "defendingChampion": {
+    "athlete": {
+     "id": "3470",
+     "displayName": "Rory McIlroy",
+     "amateur": false
+    },
+    "displayName": ""
+   },
+   "playoffType": {
+    "id": -1,
+    "description": "None",
+    "minimumHoles": 0
+   },
+   "competitions": [
+    {
+     "id": "401811941",
+     "uid": "s:1100~l:1106~e:401811941~c:401811941",
+     "date": "2026-04-09T04:00Z",
+     "endDate": "2026-04-12T04:00Z",
+     "recent": false,
+     "onWatchESPN": false,
+     "dataFormat": "API",
+     "status": {
+      "period": 4,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Complete"
+      }
+     },
+     "broadcasts": [
+      {
+       "media": {
+        "id": "44",
+        "slug": "cbs",
+        "name": "CBS",
+        "shortName": "CBS",
+        "callLetters": "CBS"
+       },
+       "lang": "en",
+       "region": "us"
+      },
+      {
+       "media": {
+        "id": "126",
+        "slug": "espn",
+        "name": "ESPN",
+        "shortName": "ESPN",
+        "callLetters": "ESPN"
+       },
+       "lang": "en",
+       "region": "us"
+      },
+      {
+       "media": {
+        "id": "755",
+        "slug": "espnplus",
+        "name": "ESPN+",
+        "shortName": "ESPN+",
+        "callLetters": "ESPN+"
+       },
+       "lang": "en",
+       "region": "us"
+      },
+      {
+       "media": {
+        "id": "763",
+        "slug": "prime-video",
+        "name": "Prime Video",
+        "shortName": "Prime Video",
+        "callLetters": "Prime Video"
+       },
+       "lang": "en",
+       "region": "us"
+      },
+      {
+       "media": {
+        "id": "792",
+        "slug": "paramountplus",
+        "name": "Paramount+",
+        "shortName": "Paramount+",
+        "callLetters": "Paramount+"
+       },
+       "lang": "en",
+       "region": "us"
+      }
+     ],
+     "competitors": [
+      {
+       "id": "3470",
+       "uid": "s:1100~a:3470",
+       "movement": 0,
+       "earnings": 4500000.0,
+       "sortOrder": 1,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-04-12T18:25Z",
+        "hole": 18,
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-1(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "1",
+         "displayName": "1",
+         "isTie": false
+        }
+       },
+       "score": {
+        "value": 276.0,
+        "displayValue": "-12"
+       },
+       "linescores": [
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 1,
+         "inScore": 33,
+         "outScore": 34,
+         "currentPosition": 1,
+         "teeTime": "2026-04-09T14:31Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 2,
+         "inScore": 31,
+         "outScore": 34,
+         "startPosition": 1,
+         "currentPosition": 1,
+         "teeTime": "2026-04-10T17:44Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 73.0,
+         "displayValue": "+1",
+         "period": 3,
+         "inScore": 37,
+         "outScore": 36,
+         "startPosition": 1,
+         "currentPosition": 1,
+         "teeTime": "2026-04-11T18:50Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 71.0,
+         "displayValue": "-1",
+         "period": 4,
+         "inScore": 35,
+         "outScore": 36,
+         "startPosition": 1,
+         "currentPosition": 1,
+         "teeTime": "2026-04-12T18:25Z",
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -12.0,
+         "displayValue": "-12"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$4,500,000"
+        },
+        {
+         "name": "cupPoints",
+         "value": 750.0,
+         "displayValue": "750"
+        }
+       ],
+       "athlete": {
+        "id": "3470",
+        "uid": "s:1100~a:3470",
+        "guid": "65575c5e-0ef2-9f58-6495-42da8638a332",
+        "displayName": "Rory McIlroy",
+        "shortName": "R. McIlroy",
+        "lastName": "McIlroy",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/nir.png",
+         "alt": "Northern Ireland"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "NIR"
+        }
+       }
+      },
+      {
+       "id": "9478",
+       "uid": "s:1100~a:9478",
+       "movement": -5,
+       "earnings": 2430000.0,
+       "sortOrder": 2,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-04-12T17:52Z",
+        "hole": 18,
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-4(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "2",
+         "displayName": "2",
+         "isTie": false
+        }
+       },
+       "score": {
+        "value": 277.0,
+        "displayValue": "-11"
+       },
+       "linescores": [
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 1,
+         "inScore": 37,
+         "outScore": 33,
+         "currentPosition": 6,
+         "teeTime": "2026-04-09T17:44Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 74.0,
+         "displayValue": "+2",
+         "period": 2,
+         "inScore": 37,
+         "outScore": 37,
+         "startPosition": 6,
+         "currentPosition": 24,
+         "teeTime": "2026-04-10T14:19Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 3,
+         "inScore": 34,
+         "outScore": 31,
+         "startPosition": 24,
+         "currentPosition": 7,
+         "teeTime": "2026-04-11T16:16Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 4,
+         "inScore": 34,
+         "outScore": 34,
+         "startPosition": 7,
+         "currentPosition": 2,
+         "teeTime": "2026-04-12T17:52Z",
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -11.0,
+         "displayValue": "-11"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$2,430,000"
+        },
+        {
+         "name": "cupPoints",
+         "value": 500.0,
+         "displayValue": "500"
+        }
+       ],
+       "athlete": {
+        "id": "9478",
+        "uid": "s:1100~a:9478",
+        "guid": "38cbeebe-aac8-fb36-dce0-cf45436086e4",
+        "displayName": "Scottie Scheffler",
+        "shortName": "S. Scheffler",
+        "lastName": "Scheffler",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+         "alt": "USA"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "USA",
+         "stateAbbreviation": "TX"
+        }
+       }
+      },
+      {
+       "id": "5553",
+       "uid": "s:1100~a:5553",
+       "movement": -12,
+       "earnings": 1080000.0,
+       "sortOrder": 3,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-04-12T16:35Z",
+        "hole": 18,
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-6(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "3",
+         "displayName": "T3",
+         "isTie": true
+        }
+       },
+       "score": {
+        "value": 278.0,
+        "displayValue": "-10"
+       },
+       "linescores": [
+        {
+         "value": 74.0,
+         "displayValue": "+2",
+         "period": 1,
+         "inScore": 36,
+         "outScore": 38,
+         "currentPosition": 40,
+         "teeTime": "2026-04-09T16:56Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 2,
+         "inScore": 34,
+         "outScore": 32,
+         "startPosition": 40,
+         "currentPosition": 7,
+         "teeTime": "2026-04-10T13:31Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 72.0,
+         "displayValue": "E",
+         "period": 3,
+         "inScore": 35,
+         "outScore": 37,
+         "startPosition": 7,
+         "currentPosition": 15,
+         "teeTime": "2026-04-11T18:17Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 4,
+         "inScore": 33,
+         "outScore": 33,
+         "startPosition": 15,
+         "currentPosition": 3,
+         "teeTime": "2026-04-12T16:35Z",
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -10.0,
+         "displayValue": "-10"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$1,080,000"
+        },
+        {
+         "name": "cupPoints",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ],
+       "athlete": {
+        "id": "5553",
+        "uid": "s:1100~a:5553",
+        "guid": "ab95205e-c964-97c7-c309-9841844bc546",
+        "displayName": "Tyrrell Hatton",
+        "shortName": "T. Hatton",
+        "lastName": "Hatton",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+         "alt": "England"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "ENG"
+        }
+       }
+      },
+      {
+       "id": "5409",
+       "uid": "s:1100~a:5409",
+       "movement": -6,
+       "earnings": 1080000.0,
+       "sortOrder": 4,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-04-12T17:41Z",
+        "hole": 18,
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-4(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "3",
+         "displayName": "T3",
+         "isTie": true
+        }
+       },
+       "score": {
+        "value": 278.0,
+        "displayValue": "-10"
+       },
+       "linescores": [
+        {
+         "value": 73.0,
+         "displayValue": "+1",
+         "period": 1,
+         "inScore": 37,
+         "outScore": 36,
+         "currentPosition": 33,
+         "teeTime": "2026-04-09T14:19Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 71.0,
+         "displayValue": "-1",
+         "period": 2,
+         "inScore": 37,
+         "outScore": 34,
+         "startPosition": 33,
+         "currentPosition": 24,
+         "teeTime": "2026-04-10T17:32Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 66.0,
+         "displayValue": "-6",
+         "period": 3,
+         "inScore": 32,
+         "outScore": 34,
+         "startPosition": 24,
+         "currentPosition": 9,
+         "teeTime": "2026-04-11T15:54Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 68.0,
+         "displayValue": "-4",
+         "period": 4,
+         "inScore": 36,
+         "outScore": 32,
+         "startPosition": 9,
+         "currentPosition": 3,
+         "teeTime": "2026-04-12T17:41Z",
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -10.0,
+         "displayValue": "-10"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$1,080,000"
+        },
+        {
+         "name": "cupPoints",
+         "value": 313.0,
+         "displayValue": "313"
+        }
+       ],
+       "athlete": {
+        "id": "5409",
+        "uid": "s:1100~a:5409",
+        "guid": "4c308ece-76d6-b5d7-697c-7d1d3535f1d0",
+        "displayName": "Russell Henley",
+        "shortName": "R. Henley",
+        "lastName": "Henley",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+         "alt": "USA"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "USA",
+         "stateAbbreviation": "GA"
+        }
+       }
+      },
+      {
+       "id": "569",
+       "uid": "s:1100~a:569",
+       "movement": -2,
+       "earnings": 1080000.0,
+       "sortOrder": 5,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-04-12T18:03Z",
+        "hole": 18,
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "-2(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "3",
+         "displayName": "T3",
+         "isTie": true
+        }
+       },
+       "score": {
+        "value": 278.0,
+        "displayValue": "-10"
+       },
+       "linescores": [
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 1,
+         "inScore": 37,
+         "outScore": 33,
+         "currentPosition": 6,
+         "teeTime": "2026-04-09T17:20Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 2,
+         "inScore": 34,
+         "outScore": 35,
+         "startPosition": 6,
+         "currentPosition": 4,
+         "teeTime": "2026-04-10T13:55Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 69.0,
+         "displayValue": "-3",
+         "period": 3,
+         "inScore": 35,
+         "outScore": 34,
+         "startPosition": 4,
+         "currentPosition": 5,
+         "teeTime": "2026-04-11T18:39Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 70.0,
+         "displayValue": "-2",
+         "period": 4,
+         "inScore": 38,
+         "outScore": 32,
+         "startPosition": 5,
+         "currentPosition": 3,
+         "teeTime": "2026-04-12T18:03Z",
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -10.0,
+         "displayValue": "-10"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$1,080,000"
+        },
+        {
+         "name": "cupPoints",
+         "value": 313.0,
+         "displayValue": "313"
+        }
+       ],
+       "athlete": {
+        "id": "569",
+        "uid": "s:1100~a:569",
+        "guid": "25cd1b68-2fd7-49bb-68e9-6abe8d8896ba",
+        "displayName": "Justin Rose",
+        "shortName": "J. Rose",
+        "lastName": "Rose",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+         "alt": "England"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "RSA"
+        }
+       }
+      },
+      {
+       "id": "4425906",
+       "uid": "s:1100~a:4425906",
+       "movement": 2,
+       "earnings": 1080000.0,
+       "sortOrder": 6,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "F",
+        "period": 4,
+        "teeTime": "2026-04-12T18:25Z",
+        "hole": 18,
+        "startHole": 1,
+        "thru": 18,
+        "displayThru": "18",
+        "playoff": false,
+        "behindCurrentRound": false,
+        "detail": "+1(F)",
+        "type": {
+         "id": "2",
+         "name": "STATUS_FINISH",
+         "state": "post",
+         "completed": true,
+         "description": "Finish",
+         "detail": "Finish",
+         "shortDetail": "F"
+        },
+        "position": {
+         "id": "3",
+         "displayName": "T3",
+         "isTie": true
+        }
+       },
+       "score": {
+        "value": 278.0,
+        "displayValue": "-10"
+       },
+       "linescores": [
+        {
+         "value": 73.0,
+         "displayValue": "+1",
+         "period": 1,
+         "inScore": 33,
+         "outScore": 40,
+         "currentPosition": 33,
+         "teeTime": "2026-04-09T14:31Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 67.0,
+         "displayValue": "-5",
+         "period": 2,
+         "inScore": 33,
+         "outScore": 34,
+         "startPosition": 33,
+         "currentPosition": 7,
+         "teeTime": "2026-04-10T17:44Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 65.0,
+         "displayValue": "-7",
+         "period": 3,
+         "inScore": 33,
+         "outScore": 32,
+         "startPosition": 7,
+         "currentPosition": 1,
+         "teeTime": "2026-04-11T17:55Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 73.0,
+         "displayValue": "+1",
+         "period": 4,
+         "inScore": 36,
+         "outScore": 37,
+         "startPosition": 1,
+         "currentPosition": 3,
+         "teeTime": "2026-04-12T18:25Z",
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": -10.0,
+         "displayValue": "-10"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "$1,080,000"
+        },
+        {
+         "name": "cupPoints",
+         "value": 313.0,
+         "displayValue": "313"
+        }
+       ],
+       "athlete": {
+        "id": "4425906",
+        "uid": "s:1100~a:4425906",
+        "guid": "43c55459-a359-d86e-e2a9-54961c57a033",
+        "displayName": "Cameron Young",
+        "shortName": "C. Young",
+        "lastName": "Young",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+         "alt": "USA"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "USA",
+         "stateAbbreviation": "NY"
+        }
+       }
+      },
+      {
+       "id": "4589438",
+       "uid": "s:1100~a:4589438",
+       "movement": 0,
+       "earnings": 0.0,
+       "sortOrder": 55,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "CUT",
+        "period": 2,
+        "hole": 18,
+        "startHole": 1,
+        "behindCurrentRound": true,
+        "detail": "E(CUT)",
+        "type": {
+         "id": "3",
+         "name": "STATUS_CUT",
+         "state": "post",
+         "completed": false,
+         "description": "Missed Cut",
+         "detail": "Missed Cut",
+         "shortDetail": "CUT"
+        },
+        "position": {
+         "id": "55",
+         "displayName": "-",
+         "isTie": true
+        }
+       },
+       "score": {
+        "value": 149.0,
+        "displayValue": "+5"
+       },
+       "linescores": [
+        {
+         "value": 77.0,
+         "displayValue": "+5",
+         "period": 1,
+         "inScore": 40,
+         "outScore": 37,
+         "currentPosition": 65,
+         "teeTime": "2026-04-09T16:44Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 72.0,
+         "displayValue": "E",
+         "period": 2,
+         "inScore": 34,
+         "outScore": 38,
+         "startPosition": 65,
+         "currentPosition": 55,
+         "teeTime": "2026-04-10T13:19Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 0.0,
+         "displayValue": "-",
+         "period": 3,
+         "startPosition": 55,
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": 5.0,
+         "displayValue": "+5"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "--"
+        },
+        {
+         "name": "cupPoints",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ],
+       "athlete": {
+        "id": "4589438",
+        "uid": "s:1100~a:4589438",
+        "guid": "8d3dad25-1b6f-ef11-4758-d65f7cf17d37",
+        "displayName": "Harry Hall",
+        "shortName": "H. Hall",
+        "lastName": "Hall",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+         "alt": "England"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "ENG"
+        }
+       }
+      },
+      {
+       "id": "4251",
+       "uid": "s:1100~a:4251",
+       "movement": 0,
+       "earnings": 0.0,
+       "sortOrder": 56,
+       "amateur": false,
+       "featured": false,
+       "status": {
+        "displayValue": "CUT",
+        "period": 2,
+        "hole": 18,
+        "startHole": 1,
+        "behindCurrentRound": true,
+        "detail": "E(CUT)",
+        "type": {
+         "id": "3",
+         "name": "STATUS_CUT",
+         "state": "post",
+         "completed": false,
+         "description": "Missed Cut",
+         "detail": "Missed Cut",
+         "shortDetail": "CUT"
+        },
+        "position": {
+         "id": "55",
+         "displayName": "-",
+         "isTie": true
+        }
+       },
+       "score": {
+        "value": 149.0,
+        "displayValue": "+5"
+       },
+       "linescores": [
+        {
+         "value": 77.0,
+         "displayValue": "+5",
+         "period": 1,
+         "inScore": 36,
+         "outScore": 41,
+         "currentPosition": 65,
+         "teeTime": "2026-04-09T12:26Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 72.0,
+         "displayValue": "E",
+         "period": 2,
+         "inScore": 35,
+         "outScore": 37,
+         "startPosition": 65,
+         "currentPosition": 55,
+         "teeTime": "2026-04-10T15:39Z",
+         "hasStream": false,
+         "isPlayoff": false
+        },
+        {
+         "value": 0.0,
+         "displayValue": "-",
+         "period": 3,
+         "startPosition": 55,
+         "hasStream": false,
+         "isPlayoff": false
+        }
+       ],
+       "statistics": [
+        {
+         "name": "scoreToPar",
+         "value": 5.0,
+         "displayValue": "+5"
+        },
+        {
+         "name": "officialAmount",
+         "displayValue": "--"
+        },
+        {
+         "name": "cupPoints",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ],
+       "athlete": {
+        "id": "4251",
+        "uid": "s:1100~a:4251",
+        "guid": "806bd5d6-e854-c747-0815-da8c7564a44f",
+        "displayName": "Ryan Fox",
+        "shortName": "R. Fox",
+        "lastName": "Fox",
+        "amateur": false,
+        "flag": {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
+         "alt": "New Zealand"
+        },
+        "birthPlace": {
+         "countryAbbreviation": "NZL"
+        }
+       }
+      }
+     ],
+     "holeByHoleSource": {
+      "id": "1",
+      "state": "basic",
+      "description": "basic/manual"
+     },
+     "scoringSystem": {
+      "id": "1",
+      "name": "Medal"
+     }
+    }
+   ],
+   "courses": [
+    {
+     "id": "21",
+     "name": "Augusta National Golf Club",
+     "totalYards": 7565,
+     "shotsToPar": 72,
+     "parIn": 36,
+     "parOut": 36,
+     "host": true,
+     "holes": [
+      {
+       "number": 1,
+       "shotsToPar": 4,
+       "totalYards": 445
+      },
+      {
+       "number": 2,
+       "shotsToPar": 5,
+       "totalYards": 585
+      },
+      {
+       "number": 3,
+       "shotsToPar": 4,
+       "totalYards": 350
+      },
+      {
+       "number": 4,
+       "shotsToPar": 3,
+       "totalYards": 240
+      },
+      {
+       "number": 5,
+       "shotsToPar": 4,
+       "totalYards": 495
+      },
+      {
+       "number": 6,
+       "shotsToPar": 3,
+       "totalYards": 180
+      },
+      {
+       "number": 7,
+       "shotsToPar": 4,
+       "totalYards": 450
+      },
+      {
+       "number": 8,
+       "shotsToPar": 5,
+       "totalYards": 570
+      },
+      {
+       "number": 9,
+       "shotsToPar": 4,
+       "totalYards": 460
+      },
+      {
+       "number": 10,
+       "shotsToPar": 4,
+       "totalYards": 495
+      },
+      {
+       "number": 11,
+       "shotsToPar": 4,
+       "totalYards": 520
+      },
+      {
+       "number": 12,
+       "shotsToPar": 3,
+       "totalYards": 155
+      },
+      {
+       "number": 13,
+       "shotsToPar": 5,
+       "totalYards": 545
+      },
+      {
+       "number": 14,
+       "shotsToPar": 4,
+       "totalYards": 440
+      },
+      {
+       "number": 15,
+       "shotsToPar": 5,
+       "totalYards": 550
+      },
+      {
+       "number": 16,
+       "shotsToPar": 3,
+       "totalYards": 170
+      },
+      {
+       "number": 17,
+       "shotsToPar": 4,
+       "totalYards": 450
+      },
+      {
+       "number": 18,
+       "shotsToPar": 4,
+       "totalYards": 465
+      }
+     ],
+     "address": {
+      "city": "Augusta",
+      "state": "GA",
+      "country": "USA",
+      "zipCode": "30904"
+     }
+    }
+   ]
+  }
+ ]
+}

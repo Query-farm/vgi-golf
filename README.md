@@ -344,3 +344,7 @@ MIT for the worker source code; see [LICENSE](LICENSE). Retrieved data stays
 subject to its owners' terms, as described above.
 
 Copyright 2026 Query Farm LLC - https://query.farm
+
+## Executed notebook
+
+[Inspect the holes behind a round total](notebooks/README.md) with recorded scorecards, a round-window experiment, and a separately selectable live path.

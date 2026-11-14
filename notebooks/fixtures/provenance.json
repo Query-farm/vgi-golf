@@ -1,0 +1,19 @@
+{
+  "source_repository": "https://github.com/Query-farm/vgi-golf",
+  "source_revision": "a2253a7cde897b2c0dcadcfe12eaa7b5f48708d5",
+  "description": "Unmodified repository test fixtures, described by tests as recorded upstream ESPN responses. Original capture timestamps are not documented. Leaderboard is an eight-player subset; the selected player scorecard contains all 72 regulation holes. Not a complete tournament field.",
+  "files": [
+    {
+      "file": "leaderboard_pga_masters_2026.json",
+      "source_path": "tests/fixtures/leaderboard_pga_masters_2026.json",
+      "bytes": 27718,
+      "sha256": "255cc38645acfb0c90779f288c2a5a15601ef6510451dae28a827eb57ee58a3e"
+    },
+    {
+      "file": "linescores_masters_scheffler.json",
+      "source_path": "tests/fixtures/linescores_masters_scheffler.json",
+      "bytes": 21633,
+      "sha256": "669330e5cfe3132c5b91c78c9b51d702c5c0b6f0aebe716080d10e3a9917ae9e"
+    }
+  ]
+}
