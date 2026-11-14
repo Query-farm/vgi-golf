@@ -102,7 +102,7 @@ def test_discovery_contract_matches_agent_test_sidecar() -> None:
     examples = json.loads(GOLF_CATALOG.tags["vgi.executable_examples"])
     tasks = json.loads(GOLF_CATALOG.tags["vgi.agent_test_tasks"])
     assert all({"name", "description", "sql", "expected_result"} <= example.keys() for example in examples)
-    assert 6 <= len(tasks) <= 10
+    assert 6 <= len(tasks) <= 12
     assert all(set(task) == {"name", "prompt"} for task in tasks)
     sidecar = (ROOT / "vgi-agent-tests.yaml").read_text()
     graded = re.findall(r"^  - name: (\S+)$", sidecar, re.MULTILINE)

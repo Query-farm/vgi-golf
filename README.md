@@ -173,6 +173,14 @@ FROM golf.main.season_player_stats(season := 2025)
 WHERE rounds_played >= 40
 ORDER BY driving_distance DESC
 LIMIT 10;
+
+-- 2025 major champions with their season wins and FedExCup points rank
+SELECT s.event_name, s.winner_name, s.winning_score,
+       p.wins AS season_wins, p.fedex_cup_rank
+FROM golf.main.schedule(season := 2025) s
+JOIN golf.main.season_player_stats(season := 2025) p ON p.player_id = s.winner_id
+WHERE s.event_name IN ('Masters Tournament', 'PGA Championship', 'U.S. Open', 'The Open')
+ORDER BY s.start_date;
 ```
 
 Percentages use a 0-100 scale. Money is `DECIMAL(14,2)` US dollars. Golfers
@@ -311,9 +319,9 @@ uv run pytest            # offline: unit, catalog, packaging and hermetic Haybar
 uv run pytest -m live    # opt-in: hits ESPN and OWGR
 uv build
 uvx twine check dist/*
-uvx --from vgi-lint-check==2.2.0 vgi-lint lint 'uv run golf_worker.py' \
+uvx --from vgi-lint-check==2.5.0 vgi-lint lint 'uv run golf_worker.py' \
   --no-execute --no-check-links --audit-waivers --fail-on warning
-uvx --from vgi-lint-check==2.2.0 vgi-lint lint 'uv run golf_worker.py' \
+uvx --from vgi-lint-check==2.5.0 vgi-lint lint 'uv run golf_worker.py' \
   --execute-concurrency 1 --no-check-links --audit-waivers --fail-on error
 ```
 

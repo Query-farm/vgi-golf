@@ -20,6 +20,12 @@ from vgi_golf.schemas import (
     WORLD_RANKINGS_SCHEMA,
 )
 from vgi_golf.tournaments import (
+    LEADERBOARD_WORLD_RANK_DESCRIPTION,
+    LEADERBOARD_WORLD_RANK_SQL,
+    MAJOR_WINNERS_STATS_DESCRIPTION,
+    MAJOR_WINNERS_STATS_SQL,
+    SCORING_BY_PAR_DESCRIPTION,
+    SCORING_BY_PAR_SQL,
     TOURNAMENT_FUNCTIONS,
     CurrentLeaderboardFunction,
     CurrentScheduleFunction,
@@ -159,6 +165,16 @@ _RANKINGS_TAGS = _table_tags(
     ],
 )
 
+# Schema-level examples: the current leaderboard plus queries that combine several objects.
+_SCHEMA_EXAMPLES = json.dumps(
+    [
+        *json.loads(_LEADERBOARD_TAGS["vgi.example_queries"]),
+        {"description": MAJOR_WINNERS_STATS_DESCRIPTION, "sql": MAJOR_WINNERS_STATS_SQL},
+        {"description": SCORING_BY_PAR_DESCRIPTION, "sql": SCORING_BY_PAR_SQL},
+        {"description": LEADERBOARD_WORLD_RANK_DESCRIPTION, "sql": LEADERBOARD_WORLD_RANK_SQL},
+    ]
+)
+
 _EXECUTABLE_EXAMPLES = json.dumps(
     [
         {
@@ -241,6 +257,22 @@ _AGENT_TEST_TASKS = json.dumps(
         {
             "name": "japan_world_ranking",
             "prompt": "How many Japanese golfers are inside the top 2000 of the Official World Golf Ranking?",
+        },
+        {
+            "name": "pga_2025_lowest_ranked_winner",
+            "prompt": (
+                "Among 2025 PGA Tour event winners who appear in the 2025 PGA Tour season statistics, "
+                "which one finished lowest in the FedExCup points standings (the largest "
+                "fedex_cup_rank)? Return one row with event_name, winner_name and fedex_cup_rank."
+            ),
+        },
+        {
+            "name": "scheffler_masters_long_par_fours",
+            "prompt": (
+                "At the 2026 Masters (ESPN event 401811941), what was Scottie Scheffler's (ESPN id "
+                "9478) combined score to par, over all four rounds, on the par-4 holes measuring 450 "
+                "yards or more? Return one column, total_to_par."
+            ),
         },
     ]
 )
@@ -371,7 +403,7 @@ GOLF_CATALOG = Catalog(
                     "Current tables cover the PGA Tour and OWGR; functions add the DP World Tour, "
                     "LIV Golf, LPGA, PGA Tour Champions, Korn Ferry Tour and past seasons."
                 ),
-                "vgi.example_queries": _LEADERBOARD_TAGS["vgi.example_queries"],
+                "vgi.example_queries": _SCHEMA_EXAMPLES,
             },
             functions=[*TOURNAMENT_FUNCTIONS, *PLAYER_FUNCTIONS, *RANKING_FUNCTIONS],
             tables=[

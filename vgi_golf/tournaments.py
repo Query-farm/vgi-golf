@@ -246,6 +246,17 @@ _LIV_SQL = (
     "SELECT position, player_name, score_to_par, total_strokes "
     "FROM golf.main.leaderboard(tour := 'liv', event_id := 401811430) ORDER BY sort_order LIMIT 10"
 )
+# OWGR ids are not ESPN ids, so the ranking joins the leaderboard on the golfer's name.
+LEADERBOARD_WORLD_RANK_SQL = (
+    "SELECT l.position, l.player_name, l.score_to_par, w.rank AS world_rank "
+    f"FROM golf.main.leaderboard(event_id := {MASTERS_2026}) l "
+    "LEFT JOIN golf.main.current_world_rankings w ON w.player_name = l.player_name "
+    "ORDER BY l.sort_order LIMIT 10"
+)
+LEADERBOARD_WORLD_RANK_DESCRIPTION = (
+    "The 2026 Masters top ten with each golfer's current world ranking, joined on name "
+    "because OWGR ids are not ESPN ids."
+)
 
 
 @init_single_worker
@@ -283,9 +294,13 @@ class LeaderboardFunction(TableFunctionGenerator[LeaderboardArgs]):
             examples=[
                 ("The final 2026 Masters leaderboard.", _LEADERBOARD_SQL),
                 ("Top ten at LIV Golf Indianapolis 2026.", _LIV_SQL),
+                (LEADERBOARD_WORLD_RANK_DESCRIPTION, LEADERBOARD_WORLD_RANK_SQL),
             ],
         )
-        examples = [FunctionExample(sql=_LEADERBOARD_SQL, description="The final 2026 Masters leaderboard")]
+        examples = [
+            FunctionExample(sql=_LEADERBOARD_SQL, description="The final 2026 Masters leaderboard"),
+            FunctionExample(sql=LEADERBOARD_WORLD_RANK_SQL, description=LEADERBOARD_WORLD_RANK_DESCRIPTION),
+        ]
 
     @classmethod
     def cardinality(cls, params: object) -> TableCardinality:
@@ -356,6 +371,17 @@ _SCHEDULE_SQL = (
 _LPGA_SCHEDULE_SQL = (
     "SELECT start_date, event_name, status FROM golf.main.schedule(tour := 'lpga') ORDER BY start_date"
 )
+MAJOR_WINNERS_STATS_SQL = (
+    "SELECT s.event_name, s.winner_name, s.winning_score, p.wins AS season_wins, p.fedex_cup_rank "
+    "FROM golf.main.schedule(season := 2025) s "
+    "JOIN golf.main.season_player_stats(season := 2025) p ON p.player_id = s.winner_id "
+    "WHERE s.event_name IN ('Masters Tournament', 'PGA Championship', 'U.S. Open', 'The Open') "
+    "ORDER BY s.start_date"
+)
+MAJOR_WINNERS_STATS_DESCRIPTION = (
+    "The 2025 major champions with their season win totals and FedExCup points rank, joining "
+    "the schedule's winner_id to that season's statistics."
+)
 
 
 @init_single_worker
@@ -390,9 +416,13 @@ class ScheduleFunction(TableFunctionGenerator[ScheduleArgs]):
             examples=[
                 ("Every 2025 PGA Tour winner.", _SCHEDULE_SQL),
                 ("The current LPGA Tour calendar.", _LPGA_SCHEDULE_SQL),
+                (MAJOR_WINNERS_STATS_DESCRIPTION, MAJOR_WINNERS_STATS_SQL),
             ],
         )
-        examples = [FunctionExample(sql=_SCHEDULE_SQL, description="Every 2025 PGA Tour winner")]
+        examples = [
+            FunctionExample(sql=_SCHEDULE_SQL, description="Every 2025 PGA Tour winner"),
+            FunctionExample(sql=MAJOR_WINNERS_STATS_SQL, description=MAJOR_WINNERS_STATS_DESCRIPTION),
+        ]
 
     @classmethod
     def cardinality(cls, params: object) -> TableCardinality:
@@ -458,6 +488,18 @@ _SCORECARD_SUMMARY_SQL = (
     "SELECT score_type, count(*) AS holes "
     f"FROM golf.main.player_scorecard({MASTERS_2026}, 3470) GROUP BY score_type ORDER BY holes DESC"
 )
+# Scorecards carry par but not yardage; course_holes() supplies the yards for each hole.
+SCORING_BY_PAR_SQL = (
+    "SELECT c.par, count(*) AS holes_played, round(avg(c.yards)) AS avg_yards, "
+    "round(avg(s.score_to_par), 3) AS avg_to_par "
+    f"FROM golf.main.player_scorecard({MASTERS_2026}, 9478) s "
+    f"JOIN golf.main.course_holes({MASTERS_2026}) c ON c.course_id = s.course_id AND c.hole = s.hole "
+    "GROUP BY c.par ORDER BY c.par"
+)
+SCORING_BY_PAR_DESCRIPTION = (
+    "Scottie Scheffler's average score to par on Augusta's par 3s, 4s and 5s at the 2026 Masters, "
+    "with each group's average yardage from the course setup."
+)
 
 
 @init_single_worker
@@ -491,9 +533,13 @@ class PlayerScorecardFunction(TableFunctionGenerator[ScorecardArgs]):
             examples=[
                 ("Scottie Scheffler's 2026 Masters scorecard.", _SCORECARD_SQL),
                 ("Rory McIlroy's 2026 Masters birdies, pars and bogeys.", _SCORECARD_SUMMARY_SQL),
+                (SCORING_BY_PAR_DESCRIPTION, SCORING_BY_PAR_SQL),
             ],
         )
-        examples = [FunctionExample(sql=_SCORECARD_SQL, description="Scottie Scheffler's 2026 Masters card")]
+        examples = [
+            FunctionExample(sql=_SCORECARD_SQL, description="Scottie Scheffler's 2026 Masters card"),
+            FunctionExample(sql=SCORING_BY_PAR_SQL, description=SCORING_BY_PAR_DESCRIPTION),
+        ]
 
     @classmethod
     def cardinality(cls, params: object) -> TableCardinality:
@@ -538,9 +584,15 @@ class CourseHolesFunction(TableFunctionGenerator[CourseArgs]):
             ),
             md="Course setup for a tournament: par and yards per hole, plus course totals.",
             schema=COURSE_HOLES_SCHEMA,
-            examples=[("Augusta National's 2026 Masters setup.", _COURSE_SQL)],
+            examples=[
+                ("Augusta National's 2026 Masters setup.", _COURSE_SQL),
+                (SCORING_BY_PAR_DESCRIPTION, SCORING_BY_PAR_SQL),
+            ],
         )
-        examples = [FunctionExample(sql=_COURSE_SQL, description="Augusta National's 2026 Masters setup")]
+        examples = [
+            FunctionExample(sql=_COURSE_SQL, description="Augusta National's 2026 Masters setup"),
+            FunctionExample(sql=SCORING_BY_PAR_SQL, description=SCORING_BY_PAR_DESCRIPTION),
+        ]
 
     @classmethod
     def cardinality(cls, params: object) -> TableCardinality:

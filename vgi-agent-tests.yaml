@@ -87,3 +87,25 @@ tasks:
     success_criteria: >-
       Uses world_rankings with max_rank 2000 (the current table stops at 1000) and counts
       rows with country_code JPN.
+
+  - name: pga_2025_lowest_ranked_winner
+    reference_sql: >-
+      SELECT s.event_name, s.winner_name, p.fedex_cup_rank
+      FROM golf.main.schedule(season := 2025) s
+      JOIN golf.main.season_player_stats(season := 2025) p ON p.player_id = s.winner_id
+      ORDER BY p.fedex_cup_rank DESC
+      LIMIT 1
+    success_criteria: >-
+      Joins schedule(season := 2025) winner_id to season_player_stats(season := 2025)
+      player_id and returns the Sanderson Farms Championship, Steven Fisk, rank 140.
+
+  - name: scheffler_masters_long_par_fours
+    reference_sql: >-
+      SELECT sum(s.score_to_par) AS total_to_par
+      FROM golf.main.player_scorecard(401811941, 9478) s
+      JOIN golf.main.course_holes(401811941) c
+        ON c.course_id = s.course_id AND c.hole = s.hole
+      WHERE c.par = 4 AND c.yards >= 450
+    success_criteria: >-
+      Takes yardage from course_holes(401811941), joins it to player_scorecard(401811941,
+      9478) by hole, keeps par-4 holes of at least 450 yards and sums score_to_par to -2.
