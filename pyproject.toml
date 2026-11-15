@@ -1,6 +1,6 @@
 [project]
 name = "vgi-golf"
-version = "0.2.0"
+version = "0.2.1"
 description = "A read-only VGI worker exposing professional golf leaderboards, schedules, statistics and world rankings to Haybarn SQL"
 readme = "README.md"
 license = "MIT"

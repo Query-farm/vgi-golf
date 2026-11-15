@@ -349,7 +349,13 @@ GOLF_CATALOG = Catalog(
             "across tours. The ranking uses OWGR's own `owgr_player_id`. Scores to par are "
             "integers (E = 0); round scores are strokes.\n\n"
             "Data comes from ESPN's undocumented golf endpoints and OWGR's public backend. This "
-            "worker is not affiliated with ESPN, Disney, any tour or OWGR."
+            "worker is not affiliated with ESPN, Disney, any tour or OWGR.\n\n"
+            "## Sources and references\n\n"
+            "* [ESPN Golf](https://www.espn.com/golf/): tour schedules, "
+            "[leaderboards](https://www.espn.com/golf/leaderboard), scorecards and golfer profiles.\n"
+            "* [Official World Golf Ranking](https://www.owgr.com/): the [current world "
+            "ranking](https://www.owgr.com/current-world-ranking) behind `current_world_rankings`.\n"
+            "* [Disney Terms of Use](https://disneytermsofuse.com/): the terms that govern ESPN's data."
         ),
     },
     schemas=[

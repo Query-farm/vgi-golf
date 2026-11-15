@@ -4,6 +4,12 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.2.1]
+
+- Docs link to ESPN Golf, the Official World Golf Ranking and ESPN's terms: the
+  catalog's documentation gains a Sources and references section (vgi-lint
+  VGI183).
+
 ## [0.2.0]
 
 - Port to VGI protocol 3.3 (vgi-python 0.51). Requires the current VGI DuckDB
