@@ -398,10 +398,12 @@ GOLF_CATALOG = Catalog(
                     ]
                 ),
                 "vgi.doc_llm": (
-                    "Start with current_leaderboard, current_schedule, current_player_stats or "
-                    "current_world_rankings. Use schedule() to find event ids, leaderboard() for any "
-                    "tour or past event, player_scorecard() for hole-by-hole detail and "
-                    "season_player_stats() for past PGA Tour seasons."
+                    "Argument-free current tables cover this week's PGA Tour leaderboard, the PGA Tour "
+                    "calendar, PGA Tour season statistics and the world ranking. Parameterized "
+                    "functions take a tour slug and reach other tours and past seasons: a tour "
+                    "schedule supplies ESPN event ids, a leaderboard for an event supplies golfer ids, "
+                    "and an event id plus a golfer id gives a hole-by-hole scorecard. Past-season "
+                    "statistics exist for the PGA Tour only."
                 ),
                 "vgi.doc_md": (
                     "## Golf analytical data\n\n"
