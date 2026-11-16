@@ -1,0 +1,115 @@
+# name: test/sql/golf.test
+# description: Hermetic end-to-end coverage: every table and backing scan, served from the
+#   recorded ESPN and OWGR fixtures by test/mock_api/server.py (see ci/run-integration.sh).
+# group: [golf]
+
+require vgi
+
+require-env VGI_GOLF_WORKER
+
+require-env GOLF_ESPN_SITE_URL
+
+statement ok
+ATTACH 'golf' (TYPE vgi, LOCATION '{VGI_GOLF_WORKER}');
+
+
+# tours
+query I
+SELECT count(*) FROM golf.main.tours;
+----
+6
+
+# leaderboard
+query I
+SELECT count(*) FROM golf.main.current_leaderboard;
+----
+8
+
+# schedule
+query I
+SELECT count(*) FROM golf.main.current_schedule;
+----
+3
+
+# stats
+query I
+SELECT count(*) FROM golf.main.current_player_stats;
+----
+4
+
+# rankings
+query I
+SELECT count(*) FROM golf.main.current_world_rankings;
+----
+5
+
+# leaderboard_scan
+query I
+SELECT count(*) FROM golf.main.all_current_leaderboard();
+----
+8
+
+# tours_scan
+query I
+SELECT count(*) FROM golf.main.all_tours();
+----
+6
+
+# schedule_scan
+query I
+SELECT count(*) FROM golf.main.all_current_schedule();
+----
+3
+
+# stats_scan
+query I
+SELECT count(*) FROM golf.main.all_current_player_stats();
+----
+4
+
+# rankings_scan
+query I
+SELECT count(*) FROM golf.main.all_current_world_rankings();
+----
+5
+
+# season_events
+query I
+SELECT count(*) FROM golf.main.schedule(season := 2025) WHERE completed;
+----
+3
+
+# season_stats
+query I
+SELECT count(*) FROM golf.main.season_player_stats(season := 2026);
+----
+4
+
+# top_three
+query I
+SELECT count(*) FROM golf.main.world_rankings(max_rank := 3);
+----
+3
+
+# holes
+query I
+SELECT count(*) FROM golf.main.player_scorecard(401811941, 9478);
+----
+72
+
+# course
+query I
+SELECT count(*) FROM golf.main.course_holes(401811941);
+----
+18
+
+# profile
+query I
+SELECT count(*) FROM golf.main.player(9478);
+----
+1
+
+query T
+SELECT player_name FROM golf.main.leaderboard(event_id := 401811941) WHERE sort_order = 1;
+----
+Rory McIlroy
