@@ -32,14 +32,14 @@ The worker is not published to PyPI. `uvx` runs the tagged release straight from
 GitHub and caches it after the first use:
 
 ```bash
-uvx --from git+https://github.com/Query-farm/vgi-golf@v0.2.2 vgi-golf --help
+uvx --from git+https://github.com/Query-farm/vgi-golf@v0.3.0 vgi-golf --help
 ```
 
 Launch Haybarn with the catalog pre-attached:
 
 ```bash
 uvx haybarn-cli \
-  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'golf' (TYPE vgi, LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-golf@v0.2.2 vgi-golf');" \
+  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'golf' (TYPE vgi, LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-golf@v0.3.0 vgi-golf');" \
   :memory:
 ```
 
@@ -50,13 +50,15 @@ INSTALL vgi FROM community;
 LOAD vgi;
 ATTACH 'golf' (
   TYPE vgi,
-  LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-golf@v0.2.2 vgi-golf'
+  LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-golf@v0.3.0 vgi-golf'
 );
 ```
 
 For source development, run `uv lock --check`, then `uv sync` and
 `uv run vgi-golf` (or `uv run golf_worker.py`). The lockfile resolves every
 dependency from package registries.
+
+vgi-golf 0.3.0 speaks VGI protocol 3.4, so it needs Haybarn 2.0.1 or newer (Haybarn 2.0.0 loads a 3.3 `vgi` extension that cannot attach it).
 
 ## Catalog surface
 
@@ -246,7 +248,7 @@ authentication or an explicit decision to allow anonymous access:
 export VGI_SIGNING_KEY='a-long-random-secret-shared-by-every-replica'
 export VGI_BEARER_TOKENS='replace-with-a-random-token=haybarn'
 
-uvx --from git+https://github.com/Query-farm/vgi-golf@v0.2.2 vgi-golf-http \
+uvx --from git+https://github.com/Query-farm/vgi-golf@v0.3.0 vgi-golf-http \
   --host 0.0.0.0 \
   --port 8000 \
   --cors-origins 'https://sql.example.com' \
@@ -319,9 +321,9 @@ uv run pytest            # offline: unit, catalog, packaging and hermetic Haybar
 uv run pytest -m live    # opt-in: hits ESPN and OWGR
 uv build
 uvx twine check dist/*
-uvx --from vgi-lint-check==2.5.0 vgi-lint lint 'uv run golf_worker.py' \
+uvx --prerelease=allow --from 'vgi-lint-check>=2.9.0,<3' vgi-lint lint 'uv run golf_worker.py' \
   --no-execute --no-check-links --audit-waivers --fail-on warning
-uvx --from vgi-lint-check==2.5.0 vgi-lint lint 'uv run golf_worker.py' \
+uvx --prerelease=allow --from 'vgi-lint-check>=2.9.0,<3' vgi-lint lint 'uv run golf_worker.py' \
   --execute-concurrency 1 --no-check-links --audit-waivers --fail-on error
 ```
 
